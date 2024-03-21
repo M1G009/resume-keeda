@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Porter Sans";
+    src: url("../../public/font/porter-sans-block.block.ttf") format('tff'),
+        url("../../public/font/porter-sans-inline-block-webfont.woff") format('woff');
+
+}
+
+.porter {
+    font-family: "Porter Sans", sans-serif;
+}
+
+
+.button1 {
+    border: 2px solid #F6CA56;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 17px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button2 {
+    color: #fff;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+.button_small {
+    color: black;
+    border-radius: 50px;
+    background-color: transparent;
+    width: 100%;
+    border: 2px solid #F6CA56;
+    padding: 7px 15px;
+
+}
+
+.button_small:hover {
+    border: 2px solid #F6CA56;
+}
+
+
+.page_hover {
+    display: inline-block;
+    position: relative;
+}
+
+
+.page_hover:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F6CA56;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.page_hover:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.listicon {
+    transition: all .5s;
+}
+
+.listicon:hover {
+    color: #F6CA56;
+}
+
+
+
+.listitem>a {
+    color: #fff;
+
+    position: relative;
+}
+
+.listitem>a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #F6CA56;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.listitem>a:hover:after {
+    width: 100%;
+    left: 0;
+    bottom: -4px;
+
+}

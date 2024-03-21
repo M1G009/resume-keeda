@@ -1,0 +1,185 @@
+.input,
+.textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+  margin-top: 0.125rem;
+  background: #fff;
+  color: #555;
+  border: 0.0625rem solid #097;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier, monospace;
+
+}
+
+.textarea {
+  position: relative;
+}
+
+.input {
+  outline: none;
+  height: 2.75rem;
+  border-radius: 2rem;
+}
+
+.input:focus,
+.textarea:focus {
+  box-shadow: 0 0 0.0625rem 0.125rem #097;
+}
+
+.error {
+  color: red;
+}
+
+
+/* add/submit button */
+
+.button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #6B6B6B;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_hover {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+
+button:hover .button_hover {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .button_hover {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+/* next button */
+
+.cta {
+  display: flex;
+  padding: 11px;
+  margin: 0 0 50px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  color: black;
+  background: white;
+  transition: 1s;
+  box-shadow: 6px 6px 0 #6B6B6B;
+  transform: skewX(-15deg);
+  border: none;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #6B6B6B;
+  cursor: pointer;
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span {
+  transform: skewX(15deg)
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #6B6B6B;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* remove buutton */
+
+.remove_button {
+  position: relative;
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ca0d0d;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #ca0d0d;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #ca0d0d;
+}
+
+.remove_button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #ca0d0d;
+}
+
+.remove_button:active {
+  transform: scale(0.9);
+}

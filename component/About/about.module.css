@@ -1,0 +1,150 @@
+.bg_img {
+    background: url(./img/image\ 3.png);
+    background-position: center;
+    background-size: cover;
+    height: 246px;
+    display: grid;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.text {
+    color: #6047F9;
+    position: relative;
+}
+
+.text::after {
+    position: absolute;
+    content: url('./img/Vector.svg');
+    width: 100%;
+    left: 10px;
+    top: 20px;
+}
+
+.list {
+    font-size: 19px;
+    padding: 12px 0px;
+
+}
+
+.button {
+    background-color: #6047F9;
+    border: 2px solid transparent;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: larger;
+}
+
+.button:hover {
+    background-color: #6047F9;
+}
+
+.blue_patch {
+    position: absolute;
+    z-index: -10;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    background-color: #60a5fa;
+    opacity: 0.4;
+    filter: blur(140px);
+}
+
+.yellow_patch {
+    position: absolute;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    background-color: #f6c956;
+    opacity: 0.4;
+    filter: blur(150px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.box_purple,
+.box_yellow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 25px 0px;
+}
+
+.box_purple,
+.border_box_purple {
+    border: 2px solid #4F46E5;
+
+}
+
+.box_yellow,
+.border_box_yellow {
+    border: 2px solid #f6c956;
+}
+
+.img_box {
+    width: 150px;
+    height: 150px;
+
+}
+
+
+.img_box2 {
+    width: 80px;
+    height: 80px;
+}
+
+.img_box img,
+.img_box2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.border_box_purple,
+.border_box_yellow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 30px;
+}
+
+
+@media (max-width:992px) {
+    .text::after {
+        left: -10px;
+        top: 20px;
+    }
+
+    .grid,
+    .grid3 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width:600px) {
+
+    .grid,
+    .grid3 {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+}
