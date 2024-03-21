@@ -41,7 +41,7 @@ const OurTeam = () => {
                     <Box className={style.box_purple}>
                         <Box mb={2} >
                             <Box className={style.img_box}>
-                                <Image src={img2} alt='' width={170} height={170} style={{ border: "1px solid #4F46E5" }} />
+                                <Image src={img2} alt='' width={170} height={170} style={{ border: "1px solid #4F46E5" }} ></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -61,7 +61,7 @@ const OurTeam = () => {
                     <Box className={style.box_yellow}>
                         <Box mb={2} >
                             <Box className={style.img_box}>
-                                <Image src={img1} alt='' width={170} height={170} style={{ border: "1px solid #f6c956" }} />
+                                <Image src={img1} alt='' width={170} height={170} style={{ border: "1px solid #f6c956" }} ></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -81,7 +81,7 @@ const OurTeam = () => {
                     <Box className={style.box_purple}>
                         <Box mb={2} >
                             <Box className={style.img_box}>
-                                <Image src={img2} alt='' width={170} height={170} style={{ border: "1px solid #4F46E5" }} />
+                                <Image src={img2} alt='' width={170} height={170} style={{ border: "1px solid #4F46E5" }} ></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -101,7 +101,7 @@ const OurTeam = () => {
                     <Box className={style.box_yellow}>
                         <Box mb={2} >
                             <Box className={style.img_box}>
-                                <Image src={img1} alt='' width={170} height={170} style={{ border: "1px solid #f6c956" }} />
+                                <Image src={img1} alt='' width={170} height={170} style={{ border: "1px solid #f6c956" }} ></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>

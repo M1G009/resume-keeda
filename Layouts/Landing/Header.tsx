@@ -15,7 +15,7 @@ import Link from 'next/link';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
-import logo from '../../public/img/resume svg.svg'
+import logo from '../../public/img/resume_logo.svg'
 
 const pages = [
   { name: 'Home', path: '/' },
@@ -49,11 +49,16 @@ function Header() {
     <AppBar sx={{ bgcolor: '#000' }}>
       <Container sx={{ margin: 'auto' }}>
         <Toolbar disableGutters>
-          <Link href={'/'}>
-            <Box>
-              <Image src={logo} alt='logo' width={210} height={80} />
-            </Box>
-          </Link>
+          <Box sx={{ display: { md: 'block', xs: 'none' } }}>
+            <Link href={'/'}>
+              <Image src={logo} alt='logo' width={210} height={80} ></Image>
+            </Link>
+          </Box>
+          <Box sx={{ display: { md: 'none', xs: 'block' } }}>
+            <Link href={'/'}>
+              <Image src={logo} alt='logo' width={180} height={70} ></Image>
+            </Link>
+          </Box>
 
           {isMd && (<Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'end' }}>
             {isMd && (
@@ -84,13 +89,13 @@ function Header() {
               onClose={handleCloseNavMenu}
             >
               {pages.map((page) => (
-                <Link href={page.path}>
-                  <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ py: 1.5, px: 4 }}>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ py: 1.5, px: 4 }}>
+                  <Link href={page.path}>
                     <Typography textAlign="right" style={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
                       {page.name}
                     </Typography>
-                  </MenuItem>
-                </Link>
+                  </Link>
+                </MenuItem>
               ))}
               {isMd && (
                 <>
@@ -117,16 +122,16 @@ function Header() {
           {!isMd && (
             <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
               {pages.map((page) => (
-                <Link href={page.path}>
-                  <Button
-                    key={page.name}
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, mx: 2, color: router.pathname === page.path ? '#F6CA56' : 'white', fontWeight: 700 }}
-                    className={style.page_hover}
-                  >
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, mx: 2, color: router.pathname === page.path ? '#F6CA56' : 'white', fontWeight: 700 }}
+                  className={style.page_hover}
+                >
+                  <Link href={page.path}>
                     {page.name}
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               ))}
             </Box>
           )}
@@ -147,7 +152,7 @@ function Header() {
           )}
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar >
   );
 }
 

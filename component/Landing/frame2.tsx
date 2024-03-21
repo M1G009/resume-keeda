@@ -16,10 +16,10 @@ const Frame2 = () => {
 
             }}>
               <Box sx={{ display: { md: "block", xs: 'none' } }}>
-                <Image src={frame2} alt="" width={450} height={500} />
+                <Image src={frame2} alt="" width={450} height={500}></Image>
               </Box>
               <Box sx={{ display: { md: "none", xs: 'block' } }}>
-                <Image src={frame2} alt="" width={300} height={300} />
+                <Image src={frame2} alt="" width={300} height={300}></Image>
               </Box>
               <Box className={style.yellow_patch} sx={{ left: { xs: "2rem", md: '-10rem' }, top: { xs: '20rem', md: '-4rem' } }} />
 
@@ -27,14 +27,14 @@ const Frame2 = () => {
             <Grid item md={6} xs={12} >
 
               <Box sx={{ marginBottom: { xs: '2rem', md: 0 } }}>
-                <Typography   sx={{
+                <Typography sx={{
                   textAlign: 'center',
                   color: '#F6CA56',
                   m: { xs: 2 }
                 }}>
                   SECURE YOUR DREAM JOB
                 </Typography>
-                <Typography variant="h2"  component={'h3'}
+                <Typography variant="h2" component={'h3'}
                   sx={{
                     color: "#fff",
                     fontSize: { xs: '43px', sm: '48px', md: '51px' },
@@ -67,7 +67,7 @@ const Frame2 = () => {
                   formatting. Be persuasive without effort!
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: "center", my: 5 }}>
-                  <button className={style.button_yellow} style={{color:'#fff'}}>
+                  <button className={style.button_yellow} style={{ color: '#fff' }}>
                     Create Cover Letter
                   </button>
                 </Box>

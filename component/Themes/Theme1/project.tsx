@@ -1,8 +1,8 @@
 import { ThemeProvider } from '@emotion/react';
-import { Box,  Container, Grid, Typography, createTheme, useMediaQuery } from '@mui/material';
+import { Box, Container, Grid, Typography, createTheme, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 
 interface Project {
     images: string,
@@ -17,7 +17,7 @@ const Project = ({ data }: any) => {
 
     const [projectData, setProjectData] = useState<Project[]>(data)
 
-   
+
 
     return (
         <Box id='portfolio' sx={{ pt: 10 }}>
@@ -27,7 +27,7 @@ const Project = ({ data }: any) => {
                         <Box sx={{ textAlign: 'center', mb: isSmallScreen ? "40px" : "80px" }}>
                             <Typography variant='subtitle1' sx={{ color: '#9f9f9f' }}>Showcasing some of my best work</Typography>
                             <Typography variant='h3' sx={{ fontWeight: 'bold' }}>Portfolio</Typography>
-                            <div className='animated-bar'></div>
+                            <Box className='animated-bar'></Box>
                         </Box>
                         <Box sx={{ width: '100%', typography: 'body1' }}>
                             <Grid container spacing={2} direction={isSmallScreen ? "column" : "row"}>
@@ -35,7 +35,7 @@ const Project = ({ data }: any) => {
                                     <Grid item xs={6} md={4} key={index} >
                                         <Box >
                                             <Box className="card">
-                                                <Image className='card__image' src={`${process.env.API_BASE_URL}/images/` + el.images} alt='project_img' width={1000} height={1000} />
+                                                <Image className='card__image' src={`${process.env.API_BASE_URL}/images/` + el.images} alt='project_img' width={1000} height={1000} ></Image>
                                                 <Box className="card__content">
                                                     <Typography className="card__title">{el.title}</Typography>
                                                     <Typography className="card__description">{el.description}</Typography>

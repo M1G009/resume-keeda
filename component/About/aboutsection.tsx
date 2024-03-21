@@ -18,7 +18,7 @@ const AboutSection = () => {
                     <Grid container mt={8} spacing={3}>
                         <Grid item xs={12} md={6}>
                             <div style={{ maxWidth: '100%', height: 'auto' }}>
-                                <Image src={Frame} alt='frame image' width={475} height={350} layout="responsive" />
+                                <Image src={Frame} alt='frame image' width={475} height={350} className='image'></Image>
                             </div>
 
                         </Grid>
@@ -31,7 +31,7 @@ const AboutSection = () => {
                                     <li className={style.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
                                     <li className={style.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
                                 </ul>
-                                <button  className={style.button} style={{color:'#fff'}}>Read More</button>
+                                <button className={style.button} style={{ color: '#fff' }}>Read More</button>
                             </Box>
                         </Grid>
                     </Grid>

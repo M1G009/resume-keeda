@@ -37,7 +37,7 @@ const Testimonial = () => {
                     <Box className={style.border_box_purple}>
                         <Box sx={{ display: 'flex' }}>
                             <Box className={style.img_box2}>
-                                <Image src={img1} alt='' />
+                                <Image src={img1} alt='img' height={50} width={50} ></Image>
                             </Box>
                             <Box px={4}>
                                 <Typography sx={{ fontSize: '24px', mb: 1 }}>Nancy Webb</Typography>
@@ -63,7 +63,7 @@ const Testimonial = () => {
                     <Box className={style.border_box_yellow}>
                         <Box sx={{ display: 'flex' }}>
                             <Box className={style.img_box2}>
-                                <Image src={img2} alt='' />
+                                <Image src={img2} alt='img' height={50} width={50} ></Image>
                             </Box>
                             <Box px={4}>
                                 <Typography sx={{ fontSize: '24px', mb: 1 }}>Nancy Webb</Typography>
@@ -90,7 +90,7 @@ const Testimonial = () => {
                     <Box className={style.border_box_purple}>
                         <Box sx={{ display: 'flex' }}>
                             <Box className={style.img_box2}>
-                                <Image src={img1} alt='' />
+                                <Image src={img1} alt='img' height={50} width={50} ></Image>
                             </Box>
                             <Box px={4}>
                                 <Typography sx={{ fontSize: '24px', mb: 1 }}>Nancy Webb</Typography>

@@ -16,14 +16,14 @@ const FormSection = () => {
                             <input placeholder="E-mail" className={style.input} type="text" />
                             <textarea placeholder="Massage" className={style.input} rows={8} />
 
-                            <Box mt={4} sx={{display:'flex',justifyContent:'center'}}>
-                                <button className={style.button} style={{color:'#fff'}}>Send Massage</button>
+                            <Box mt={4} sx={{ display: 'flex', justifyContent: 'center' ,fontSize:{md:'17px',sm:'16px',xs:'15px'}}}>
+                                <button className={style.button} style={{ color: '#fff' }}>Send Massage</button>
                             </Box>
                         </Box>
                     </Grid>
                     <Grid item md={7} xs={12}>
                         <Box style={{ maxWidth: '100%', height: 'auto' }}>
-                            <Image src={object} alt='object image' width={575} height={350} layout="responsive" />
+                            <Image src={object} alt='object image' width={575} height={350} className='image' ></Image>
                         </Box>
                     </Grid>
 

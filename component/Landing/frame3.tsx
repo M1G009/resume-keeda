@@ -36,7 +36,7 @@ const Frame3 = () => {
                         </Typography>
 
                         <Box sx={{ mt: 5 }}>
-                            <button className={style.button} style={{color:'#fff'}}>
+                            <button className={style.button} style={{ color: '#fff' }}>
                                 <Link href={'/user'}>Create your resume now</Link>
                             </button>
                         </Box>
@@ -46,15 +46,14 @@ const Frame3 = () => {
                             <Box className={style.blue_patch} sx={{ right: { xs: "10rem", md: "0px" }, top: { xs: "50px", md: "70px" } }} />
 
                             <Box sx={{ display: { md: "block", xs: 'none' } }}>
-                                <Image src={frame3} alt='' width={450} height={500} />
+                                <Image src={frame3} alt='' width={450} height={500} ></Image>
                             </Box>
                             <Box sx={{ display: { md: "none", xs: 'block' } }}>
-                                <Image src={frame3} alt='' width={300} height={300} />
+                                <Image src={frame3} alt='' width={300} height={300} ></Image>
                             </Box>
                         </Box>
                     </Grid>
                 </Grid>
-
 
             </Container>
         </Box>

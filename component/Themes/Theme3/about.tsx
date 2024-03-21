@@ -41,20 +41,21 @@ const About = ({ skilldetail, workexp, educationdetail, personal, professional, 
 
 
                 <Grid container spacing={2}>
-                    <Grid item md={6}>
+                    <Grid item md={6} sx={{ display: { md: 'block', xs: 'none' } }}>
                         <Box className={style.aboutimg} >
                             <Box style={{ maxWidth: '100%', height: 'auto' }}>
                                 <Image
                                     src={`${process.env.API_BASE_URL}/images/` + userImage}
                                     alt='user Image'
                                     width={500}
-                                    height={700}
-                                />
+                                    height={600}
+                                    className='image'
+                                ></Image>
                             </Box>
 
                         </Box>
                     </Grid>
-                    <Grid item md={6} >
+                    <Grid item md={6} xs={12} >
 
                         <Box id='about' sx={{ pt: 10, pb: 4 }}>
                             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'start' }}>

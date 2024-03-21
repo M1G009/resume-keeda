@@ -14,7 +14,7 @@ const Frame1 = () => {
                         <Box className={style.yellow_patch} sx={{ left: { xs: "-5rem", md: '-12rem' }, top: { xs: '-5rem', md: '-7rem' } }} />
 
                         <Box sx={{ marginBottom: { xs: '2rem', md: 0 } }}>
-                            <Typography variant="h2"  component={'h3'}
+                            <Typography variant="h2" component={'h3'}
                                 sx={{
                                     color: "#fff",
                                     fontSize: { xs: '2.5rem', md: '3rem' },
@@ -22,11 +22,11 @@ const Frame1 = () => {
                                     textTransform: 'capitalize',
                                     letterSpacing: '0.05em',
                                     lineHeight: { xs: '50px', md: '70px' }
-                                    
+
                                 }}>
                                 Try our <span style={{ color: '#6047F9' }}>Professional Resume</span> Builder Now!
                             </Typography>
-                            <Typography variant="body1"  component={'h4'} sx=
+                            <Typography variant="body1" component={'h4'} sx=
                                 {{
                                     marginTop: "2rem",
                                     fontSize: { xs: '1rem', md: '1.125rem' },
@@ -43,12 +43,12 @@ const Frame1 = () => {
                             <Box sx={{ marginY: '30px' }}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
-                                        <button  className={style.button} style={{color:'#fff'}}>
+                                        <button className={style.button} style={{ color: '#fff' }}>
                                             <Link href={'/user'}> Create your resume now</Link>
                                         </button>
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <button  className={style.button_line}>
+                                        <button className={style.button_line}>
                                             Resume Examples
                                         </button>
                                     </Grid>
@@ -61,11 +61,11 @@ const Frame1 = () => {
                         display: 'flex', justifyContent: 'center'
                     }}>
                         <Box sx={{ display: { md: "block", xs: 'none' } }}>
-                            <Image src={frame1} alt="" width={500} height={500} />
+                            <Image src={frame1} alt="" width={500} height={500}></Image>
                         </Box>
                         <Box sx={{ display: { md: "none", xs: 'block' } }}>
 
-                            <Image src={frame1} alt="" width={300} height={300} />
+                            <Image src={frame1} alt="" width={300} height={300}></Image>
                         </Box>
 
 

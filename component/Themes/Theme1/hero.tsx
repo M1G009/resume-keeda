@@ -2,8 +2,8 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, Typography } from '@
 import React, { useState } from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import style from './theme1.module.css'
 import Image from 'next/image';
+import style from './theme1.module.css'
 import dribbble_icon from './img/dribble-icon.png'
 import stackoverflow_icon from './img/stack-overflow_icon.png'
 import behance_icon from './img/behance_icon.png'
@@ -23,11 +23,11 @@ const Hero = ({ professionalDetail, user }: any) => {
 
 
     return (
-        <div id='home'>
+        <Box id='home'>
             <Box overflow={'hidden'}>
-                <div id={style.stars}></div>
-                <div id={style.stars2}></div>
-                <div id={style.stars3}></div>
+                <Box id={style.stars}></Box>
+                <Box id={style.stars2}></Box>
+                <Box id={style.stars3}></Box>
 
                 <Box sx={{ position: 'relative' }}>
 
@@ -48,7 +48,7 @@ const Hero = ({ professionalDetail, user }: any) => {
                         <Typography variant='h2'>{userFirstName} {userLastName}</Typography>
                         <br />
                         <Box sx={{ display: 'flex', gap: 2, fontSize: 30 }}>I'm
-                            <div className="typewriter">{profession}</div>
+                            <Box className="typewriter">{profession}</Box>
                         </Box>
                     </Box>
                     <Box
@@ -132,7 +132,7 @@ const Hero = ({ professionalDetail, user }: any) => {
                     </Box>
                 </Box>
             </Box>
-        </div>
+        </Box>
     )
 }
 

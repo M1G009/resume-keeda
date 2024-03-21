@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import style from "./thmem2.module.css"
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
@@ -15,7 +15,7 @@ const Projects = ({ data }: any) => {
 
     const [projectData, setProjectData] = useState<Project[]>(data)
 
-    
+
 
     return (
         <Box id='portfolio' sx={{ bgcolor: "#06140F", pt: 4, pb: 10 }}>
@@ -30,7 +30,7 @@ const Projects = ({ data }: any) => {
                                 <Box className={style.card}>
                                     <Box className={style.card_inner}>
                                         <Box className={style.card_front}>
-                                            <Image className='card__image' src={`${process.env.API_BASE_URL}/images/` + el.images} alt='project_img' width={1000} height={1000} />
+                                            <Image className='card__image' src={`${process.env.API_BASE_URL}/images/` + el.images} alt='project_img' width={1000} height={1000} ></Image>
                                         </Box>
                                         <Box className={style.card_back}>
                                             <Typography variant='h2' sx={{ fontSize: '30px', fontWeight: '700' }}>{el.title}</Typography>

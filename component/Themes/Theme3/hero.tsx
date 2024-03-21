@@ -38,33 +38,33 @@ const Hero = ({ user, professional, personal }: any) => {
                                     </Typography>
                                     :
                                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                        <div>
+                                        <Box>
                                             <Typography variant="body1" color="#fff"
                                                 sx={{ fontSize: '64px', fontWeight: '700' }}>
                                                 {userExp}
                                             </Typography>
-                                        </div>
-                                        <div>
+                                        </Box>
+                                        <Box>
                                             <Typography variant="body1" color="#fff"
                                                 sx={{ fontSize: '18px', maxWidth: '100px', pl: 2., fontWeight: '500' }}>
                                                 Years of
                                                 Experiences
                                             </Typography>
-                                        </div>
+                                        </Box>
                                     </Box>}
                             </Box>
                         </Box>
                     </Grid>
                     <Grid item md={5} xs={12}>
-                        <div style={{ maxWidth: '100%', height: 'auto' }}>
+                        <Box style={{ maxWidth: '100%', height: 'auto' }}>
                             <Image
                                 src={`${process.env.API_BASE_URL}/images/` + userImage}
                                 alt='user Image'
                                 width={450}
                                 height={500}
-                                layout='responsive'
-                            />
-                        </div>
+                                className='image'
+                            ></Image>
+                        </Box>
                     </Grid>
                 </Grid>
             </Container>

@@ -64,25 +64,26 @@ const SideButton = ({ data }: any) => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List sx={{ color: 'white' }}>
-                {pages.map((text, index) => (
-                    <a href={`#${text.id}`}>
-                        <ListItem key={text.name} disablePadding>
+                {pages.map((text) => (
+                    <a href={`#${text.id}`} key={text.id}>
+                        <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemText primary={text.name} sx={{ textTransform: 'capitalize' }} />
                             </ListItemButton>
                         </ListItem>
                     </a>
                 ))}
+
             </List>
             <Divider />
             <List>
                 <ul style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '20px', listStyle: 'none', justifyContent: 'center' }}>
                     {icons.map((el, i) => (
-
-                        <li className={style.icons} key={i} style={{ flexBasis: 'calc(25% - 20px)' }}>
-                            <Image src={el.img} alt='icons' width={25} height={25} />
+                        <li className={style.icons} key={el.url}>
+                            <Image src={el.img} alt='icons' width={25} height={25} ></Image>
                         </li>
                     ))}
+
                 </ul>
 
             </List>

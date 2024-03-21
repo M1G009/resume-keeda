@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Banner = () => {
     return (
         <Box>
-            <Box sx={{position:'relative'}}>
+            <Box sx={{ position: 'relative' }}>
                 <Container sx={{ py: { xs: '50px', md: '100px' } }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Typography variant='h2' component={'h1'} sx={{
@@ -17,10 +17,10 @@ const Banner = () => {
                             textTransform: 'capitalize',
                             textAlign: "center",
                             mb: '50px',
-                            
+
                         }}>
                             Create A Resume <span className={style.text}>Fast</span> With Our <span className={style.text}>Easy</span> And <span className={style.text}>Free</span> Resume Builder</Typography>
-                        <Typography  component={'h2'} sx={{
+                        <Typography component={'h2'} sx={{
                             fontSize: { xs: '16px', md: '18px' },
                             lineHeight: '30px',
                             textAlign: 'center',
@@ -35,13 +35,12 @@ const Banner = () => {
                             and done within minutes - try now for free!
                         </Typography>
 
-                        <button style={{ marginTop: 5,color:'#fff' }}
+                        <button style={{ marginTop: 5, color: '#fff' }}
                             className={style.button}>
-                           <Link href="/user"> Create your resume now</Link>
+                            <Link href="/user"> Create your resume now</Link>
                         </button>
                     </Box>
                     <Box className={style.blue_patch} sx={{ right: { xs: "-1rem", md: "-3rem" }, top: { xs: "18rem", md: "12rem" } }} />
-                    {/* <Box className={style.yellow_patch} />   */}
                 </Container>
             </Box>
         </Box>

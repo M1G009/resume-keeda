@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Box, Container, Divider, Grid, Typography, useMediaQuery, ThemeProvider, createTheme } from '@mui/material';
+import { Box, Container, Grid, Typography, useMediaQuery, ThemeProvider, createTheme, Divider } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface AboutProps {
-    personal: any; 
-    professionalDetail: any; 
-    user: any; 
+    personal: any;
+    professionalDetail: any;
+    user: any;
 }
 
 const About: React.FC<AboutProps> = ({ personal, professionalDetail, user }) => {
@@ -45,28 +45,29 @@ const About: React.FC<AboutProps> = ({ personal, professionalDetail, user }) => 
 
 
     return (
-        <div id='about' style={{ padding: '100px 0 0' }}>
+        <Box id='about' style={{ padding: '100px 0 0' }}>
             <ThemeProvider theme={theme}>
                 <Container maxWidth="lg">
                     <Box sx={{ mt: 2 }}>
                         <Box sx={{ textAlign: 'center', mb: isSmallScreen ? "40px" : "80px" }}>
                             <Typography variant='subtitle1' sx={{ color: '#9f9f9f' }}>Get to know me</Typography>
                             <Typography variant='h3' sx={{ fontWeight: 'bold' }}>About Me</Typography>
-                            <div className='animated-bar'></div>
+                            <Box className='animated-bar'></Box>
                         </Box>
                         <Grid container spacing={2} alignItems={'center'}>
                             <Grid item xs={12} md={5}>
                                 <Box sx={{ textAlign: isSmallScreen ? 'center' : 'left' }}>
 
-                                    <div style={{ maxWidth: '100%', height: 'auto' }}>
+                                    <Box style={{ maxWidth: '100%', height: 'auto' }}>
                                         <Image
                                             src={`${process.env.API_BASE_URL}/images/` + userImage}
                                             alt='Information Image'
                                             width={450}
                                             height={500}
-                                            layout='responsive'
-                                        />
-                                    </div>
+                                            className='image'
+                                        >
+                                        </Image>
+                                    </Box>
 
                                 </Box>
                             </Grid>
@@ -97,7 +98,7 @@ const About: React.FC<AboutProps> = ({ personal, professionalDetail, user }) => 
                     </Box>
                 </Container>
             </ThemeProvider>
-        </div>
+        </Box>
     );
 };
 

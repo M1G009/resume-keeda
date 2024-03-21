@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../public/img/resume svg.svg'
+import logo from '../../../public/img/resume_logo.svg'
 
 const pages = [
     { id: 'home', name: 'Home' },
@@ -40,7 +40,7 @@ function Header() {
                 <Toolbar disableGutters>
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <Image src={logo} alt='logo' width={210} height={80}  />
+                        <Image src={logo} alt='logo' width={210} height={80} />
                     </Box>
 
 
@@ -74,13 +74,14 @@ function Header() {
                             }}
                         >
                             {pages.map((page) => (
-                                <a href={`#${page.id}`}>
-                                    <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                <a href={`#${page.id}`} key={page.id}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
                                         <Typography textAlign="center">{page.name}</Typography>
                                     </MenuItem>
                                 </a>
                             ))}
                         </Menu>
+
                     </Box>
 
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -88,19 +89,17 @@ function Header() {
                     </Box>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'end' }}>
-                        {pages.map((page, i) => (
-                            <a href={`#${page.id}`}>
+                        {pages.map((page) => (
+                            <a href={`#${page.id}`} key={page.id}>
                                 <Button
-                                    key={i}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, px: '15px', color: 'white', display: 'block' }}
                                 >
                                     {page.name}
-
-
                                 </Button>
                             </a>
                         ))}
+
                     </Box>
                 </Toolbar>
             </Container>

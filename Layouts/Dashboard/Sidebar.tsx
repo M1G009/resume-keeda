@@ -20,7 +20,7 @@ import { AccountCircle } from '@mui/icons-material';
 import { useRouter } from 'next/router';
 import style from './dashboard.module.css'
 import Link from 'next/link';
-import logo from '../../public/img/resume svg.svg'
+import logo from '../../public/img/resume_logo.svg'
 import Image from 'next/image';
 
 

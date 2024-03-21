@@ -32,7 +32,7 @@ const Project = ({ data }: any) => {
                             <Grid key={index} item md={4} sm={6} xs={12}>
                                 <Box className={style.card} sx={{ backgroundColor: index % 2 === 0 ? '#FFFFFF26' : '#131C1F' }}>
                                     <Box className={style.img} >
-                                        <Image src={`${process.env.API_BASE_URL}/images/` + el.images} alt='project image' width={337} height={350} style={{ borderRadius: '10px', overflow: 'hidden' }} />
+                                        <Image src={`${process.env.API_BASE_URL}/images/` + el.images} alt='project image' width={337} height={350} style={{ borderRadius: '10px', overflow: 'hidden' }} ></Image>
                                     </Box>
                                     <Box className={style.footer}>
                                         <Typography variant="body1" color="white" sx={{ fontSize: '18px', textTransform: 'capitalize' }}>

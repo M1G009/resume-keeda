@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import logo from '../../../public/img/resume svg.svg'
+import logo from '../../../public/img/resume_logo.svg'
 import Image from 'next/image';
 
 const pages = [
@@ -79,13 +79,14 @@ function Header() {
                   }}
                 >
                   {pages.map((page) => (
-                    <a href={`#${page.id}`}>
-                      <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                    <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                      <a href={`#${page.id}`}>
                         <Typography textAlign="center" textTransform={'uppercase'}>{page.name}</Typography>
-                      </MenuItem>
-                    </a>
+                      </a>
+                    </MenuItem>
                   ))}
                 </Menu>
+
               </Box>
 
 
@@ -95,16 +96,16 @@ function Header() {
 
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'end', }}>
                 {pages.map((page) => (
-                  <a href={`#${page.id}`}>
-                    <Button
-                      key={page.name}
-                      onClick={handleCloseNavMenu}
-                      sx={{ my: 2, px: '15px', color: 'white', display: 'block', textTransform: 'uppercase', }}
-                    >
-                      {page.name}
-                    </Button>
-                  </a>
+                  <Button
+                    key={page.id}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, px: '15px', color: 'white', display: 'block', textTransform: 'uppercase' }}
+                    href={`#${page.id}`}
+                  >
+                    {page.name}
+                  </Button>
                 ))}
+
               </Box>
 
             </Toolbar>

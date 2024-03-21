@@ -65,15 +65,15 @@ const About = ({ user, professionalDetail, personal }: any) => {
                             </Grid>
                             <Grid item xs={12} md={5} justifyContent="center">
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                    <div style={{ maxWidth: '100%', height: 'auto' }}>
+                                    <Box style={{ maxWidth: '100%', height: 'auto' }}>
                                         <Image
                                             src={`${process.env.API_BASE_URL}/images/` + userImage}
                                             alt='Information Image'
                                             width={450}
                                             height={500}
-                                            layout='responsive'
-                                        />
-                                    </div>
+                                            className='image'
+                                        ></Image>
+                                    </Box>
                                     {/* <Button variant='outlined' sx={{ width: '50%', border: '2px', borderStyle: 'solid', borderColor: '#DCD7C9', color: '#fff', py: 1.5, px: 2, borderRadius: '50px', fontWeight: '700', mt: 5 }} className='outline-button'>{profession}</Button> */}
                                 </Box>
                             </Grid>

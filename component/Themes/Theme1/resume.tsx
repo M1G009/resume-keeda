@@ -45,7 +45,7 @@ const Resume = ({ educationdetail, workexp }: any) => {
                         <Box sx={{ textAlign: 'center', mb: isSmallScreen ? "40px" : "80px" }}>
                             <Typography variant='subtitle1' sx={{ color: '#9f9f9f' }}>Check out my Resume</Typography>
                             <Typography variant='h3' sx={{ fontWeight: 'bold' }}>Resume</Typography>
-                            <div className='animated-bar'></div>
+                            <Box className='animated-bar'></Box>
                         </Box>
                         <Grid container spacing={2} direction={isSmallScreen ? "column" : "row"}>
                             <Grid item xs={12} md={6} sx={{ pr: isSmallScreen ? 0 : 4, mb: isSmallScreen ? 4 : 0 }}>
@@ -53,12 +53,12 @@ const Resume = ({ educationdetail, workexp }: any) => {
                                     <Typography variant='h5' sx={{ mb: 4 }}>Education</Typography>
                                     {
                                         educationDetail.map((el, index) => {
-                                            return <div className='resume-item' key={index}>
+                                            return <Box className='resume-item' key={index}>
                                                 <span className='item-arrow'></span>
                                                 <Typography variant='h5' sx={{ textTransform: 'capitalize' }}>{el.degree}</Typography>
                                                 <Typography variant='subtitle1' sx={{ color: '#9f9f9f', mt: 1 }}>{el.school} / {el.passingYear}</Typography>
                                                 <Typography variant='subtitle1' sx={{ color: '#9f9f9f', mt: 1 }} component="p">{el.grade}</Typography>
-                                            </div>
+                                            </Box>
                                         })
                                     }
 
@@ -70,12 +70,12 @@ const Resume = ({ educationdetail, workexp }: any) => {
 
                                     {
                                         workExperience.map((el, index) => {
-                                            return <div className='resume-item ' key={index}>
+                                            return <Box className='resume-item ' key={index}>
                                                 <span className='item-arrow'></span>
                                                 <Typography variant='h5' sx={{ textTransform: "capitalize" }}>{el.title}</Typography>
                                                 <Typography variant='subtitle1' sx={{ color: '#9f9f9f', mt: 1 }}>{el.companyName} {formatDate(el.startDate)}  {formatDate(el.endDate)}  </Typography>
                                                 <Typography variant='subtitle1' sx={{ color: '#9f9f9f', mt: 1 }} component="p">{el.description}</Typography>
-                                            </div>
+                                            </Box>
                                         })
                                     }
                                 </Box>

@@ -10,7 +10,7 @@ import stackoverflow_icon from './img/stack-overflow_icon.png'
 import behance_icon from './img/behance_icon.png'
 import github_icon from './img/github_icon.png'
 import linkedin_icon from './img/linkedin_icon.png'
-import logo from '../../../public/img/resume svg.svg'
+import logo from '../../../public/img/resume_logo.svg'
 
 const Header = ({ professional }: any) => {
     const pages = [
@@ -46,7 +46,7 @@ const Header = ({ professional }: any) => {
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0px' }} >
                         <Box sx={{ width: { md: '15%', xs: '50%' } }}>
                             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                                <Image src={logo} alt='logo' width={210} height={100} layout='responsive' />
+                                <Image src={logo} alt='logo' width={210} height={100} className="image" />
                             </Box>
                             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                                 <Image src={logo} alt='logo' width={150} height={80} />
@@ -54,23 +54,24 @@ const Header = ({ professional }: any) => {
                         </Box>
                         <Box sx={{ width: '60%', display: { md: 'block', xs: 'none' } }}>
                             <ul style={{ display: 'flex', gap: '30px', listStyle: "none", justifyContent: 'center' }}>
-                                {pages.map((page, index) => {
-                                    return <a href={`#${page.id}`}><li className={style.menu} key={index}>{page.name}</li></a>
-                                })}
+                                {pages.map((page) => (
+                                    <a href={`#${page.id}`} key={page.id}>
+                                        <li className={style.menu}>{page.name}</li>
+                                    </a>
+                                ))}
+
 
                             </ul>
                         </Box>
                         <Box sx={{ width: '25%', display: { md: 'block', xs: 'none' } }}>
                             <ul style={{ display: 'flex', gap: '20px', listStyle: "none", justifyContent: 'end' }}>
-                                {
-                                    icons.map((el, i) => (
-                                        el.url && (
-                                            <li className={style.icons} key={i} onClick={() => window.open(el.url)}>
-                                                <Image src={el.img} width={25} height={25} alt='icons' />
-                                            </li>
-                                        )
-                                    ))
-                                }
+                                {icons.map((el, i) => (
+                                    el.url && (
+                                        <li className={style.icons} key={i} onClick={() => window.open(el.url)}>
+                                            <Image src={el.img} width={25} height={25} alt='icons' ></Image>
+                                        </li>
+                                    )
+                                ))}
 
                             </ul>
                         </Box>

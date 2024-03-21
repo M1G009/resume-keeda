@@ -59,10 +59,9 @@
 .aboutimg>div>img {
     border: 2px solid #DDDDDD;
     padding: 30px;
-    border-radius: 240px;
+    border-radius: 50%;
     overflow: hidden;
     box-shadow: 2px 2px 8px #FFFFFF1A;
-    /* margin: 30px; */
 }
 
 .Scrolller::-webkit-scrollbar {
@@ -79,7 +78,6 @@
 
 }
 
-.Scrolller::-webkit-scrollbar-track {}
 
 /* project */
 

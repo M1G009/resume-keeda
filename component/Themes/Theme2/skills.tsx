@@ -159,7 +159,7 @@ const Skills = ({ skilldetail }: any) => {
         <Grid key={index} item xs={6} sm={4} md={3} lg={2}>
             <Box className={style.border_box} sx={{ textAlign: 'center' }}>
                 <Box className={style.bg_round} sx={{ borderRadius: '50%', width: '100px', height: '100px', overflow: 'hidden', margin: 'auto' }}>
-                    {getImageForSkill(skill.name) && <Image src={getImageForSkill(skill.name)} width={70} height={70} alt='' />}
+                    {getImageForSkill(skill.name) && <Image src={getImageForSkill(skill.name)} width={70} height={70} alt='skill'></Image>}
                 </Box>
                 <Typography sx={{ fontSize: '24px', fontWeight: '700' }}>{skill.rate * 10}%</Typography>
                 <Typography sx={{ color: "#D8F3DC", fontSize: '18px' }}>{skill.name}</Typography>
