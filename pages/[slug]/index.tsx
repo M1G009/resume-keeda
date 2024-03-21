@@ -1,8 +1,8 @@
 import React from 'react'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 import Theme1 from '../../component/Themes/Theme1/Theme1';
-import Theme2 from '../../component/Themes/Theme2/theme2';
-import Theme3 from '../../component/Themes/Theme3/theme3';
+import Theme2 from '../../component/Themes/Theme2/Theme2';
+import Theme3 from '../../component/Themes/Theme3/Theme3';
 
 const Index = ({ userData }) => {
   console.log("userData", userData);
