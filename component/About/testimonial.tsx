@@ -51,7 +51,7 @@ const Testimonial = () => {
                                 mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
                                 Nullam quis imperdiet augue.
                             </Typography>
-                            <ul style={{ listStyle: 'none', display: 'flex', gap: 2, marginTop: '12px', color: "#f6c956" }}>
+                            <ul className={style.ratings}>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
@@ -77,7 +77,7 @@ const Testimonial = () => {
                                 mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
                                 Nullam quis imperdiet augue.
                             </Typography>
-                            <ul style={{ listStyle: 'none', display: 'flex', gap: 2, marginTop: '12px', color: "#f6c956" }}>
+                            <ul className={style.ratings}>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
@@ -104,7 +104,7 @@ const Testimonial = () => {
                                 mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
                                 Nullam quis imperdiet augue.
                             </Typography>
-                            <ul style={{ listStyle: 'none', display: 'flex', gap: 2, marginTop: '12px', color: "#f6c956" }}>
+                            <ul className={style.ratings}>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>

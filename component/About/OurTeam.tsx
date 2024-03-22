@@ -41,7 +41,7 @@ const OurTeam = () => {
                     <Box className={style.box_purple}>
                         <Box mb={2} >
                             <Box className={style.img_box}>
-                                <Image src={img2} alt='' width={170} height={170} style={{ border: "1px solid #4F46E5" }} ></Image>
+                                <Image src={img2} alt='' width={170} height={170} className={style.border_purple}></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -49,7 +49,7 @@ const OurTeam = () => {
                             <Typography sx={{ color: "#A7A7A7", mt: 2 }}>Founder</Typography>
                         </Box>
                         <Box mt={3}>
-                            <ul style={{ listStyle: 'none', display: 'flex', gap: '15px' }}>
+                            <ul className={style.icon_list}>
                                 <li><Link href={'#'}><FacebookIcon /></Link></li>
                                 <li><Link href={'#'}><InstagramIcon /></Link></li>
                                 <li><Link href={'#'}><TwitterIcon /></Link></li>
@@ -61,7 +61,7 @@ const OurTeam = () => {
                     <Box className={style.box_yellow}>
                         <Box mb={2} >
                             <Box className={style.img_box}>
-                                <Image src={img1} alt='' width={170} height={170} style={{ border: "1px solid #f6c956" }} ></Image>
+                                <Image src={img1} alt='' width={170} height={170} className={style.border_yellowF} ></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -69,7 +69,7 @@ const OurTeam = () => {
                             <Typography sx={{ color: "#A7A7A7", mt: 2 }}>HR Manager</Typography>
                         </Box>
                         <Box mt={3}>
-                            <ul style={{ listStyle: 'none', display: 'flex', gap: '15px' }}>
+                            <ul className={style.icon_list}>
                                 <li><Link href={'#'}><FacebookIcon /></Link></li>
                                 <li><Link href={'#'}><InstagramIcon /></Link></li>
                                 <li><Link href={'#'}><TwitterIcon /></Link></li>
@@ -81,7 +81,7 @@ const OurTeam = () => {
                     <Box className={style.box_purple}>
                         <Box mb={2} >
                             <Box className={style.img_box}>
-                                <Image src={img2} alt='' width={170} height={170} style={{ border: "1px solid #4F46E5" }} ></Image>
+                                <Image src={img2} alt='' width={170} height={170} className={style.boder}></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -89,7 +89,7 @@ const OurTeam = () => {
                             <Typography sx={{ color: "#A7A7A7", mt: 2 }}>Founder</Typography>
                         </Box>
                         <Box mt={3}>
-                            <ul style={{ listStyle: 'none', display: 'flex', gap: '15px' }}>
+                            <ul className={style.icon_list}>
                                 <li><Link href={'#'}><FacebookIcon /></Link></li>
                                 <li><Link href={'#'}><InstagramIcon /></Link></li>
                                 <li><Link href={'#'}><TwitterIcon /></Link></li>
@@ -101,7 +101,7 @@ const OurTeam = () => {
                     <Box className={style.box_yellow}>
                         <Box mb={2} >
                             <Box className={style.img_box}>
-                                <Image src={img1} alt='' width={170} height={170} style={{ border: "1px solid #f6c956" }} ></Image>
+                                <Image src={img1} alt='' width={170} height={170} className={style.border_yellowF} ></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -109,7 +109,7 @@ const OurTeam = () => {
                             <Typography sx={{ color: "#A7A7A7", mt: 2 }}>HR Manager</Typography>
                         </Box>
                         <Box mt={3}>
-                            <ul style={{ listStyle: 'none', display: 'flex', gap: '15px' }}>
+                            <ul className={style.icon_list}>
                                 <li><Link href={'#'}><FacebookIcon /></Link></li>
                                 <li><Link href={'#'}><InstagramIcon /></Link></li>
                                 <li><Link href={'#'}><TwitterIcon /></Link></li>

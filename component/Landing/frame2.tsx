@@ -44,9 +44,9 @@ const Frame2 = () => {
                     lineHeight: { xs: '50px', md: '55px' },
                     mt: 2
                   }}>
-                  Create a<span style={{ color: "#F6CA56" }}> professional </span>
+                  Create a<span className={style.text_yellow}> professional </span>
                   story in minutes. Use
-                  our <span style={{ color: "#F6CA56" }}>cover letter maker.</span>
+                  our <span className={style.text_yellow}>cover letter maker.</span>
                 </Typography>
 
                 <Typography variant="body1" component={'h4'} sx=
@@ -67,7 +67,7 @@ const Frame2 = () => {
                   formatting. Be persuasive without effort!
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: "center", my: 5 }}>
-                  <button className={style.button_yellow} style={{ color: '#fff' }}>
+                  <button className={style.button_yellow} >
                     Create Cover Letter
                   </button>
                 </Box>

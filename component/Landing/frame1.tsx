@@ -24,7 +24,7 @@ const Frame1 = () => {
                                     lineHeight: { xs: '50px', md: '70px' }
 
                                 }}>
-                                Try our <span style={{ color: '#6047F9' }}>Professional Resume</span> Builder Now!
+                                Try our <span className={style.text_purple}>Professional Resume</span> Builder Now!
                             </Typography>
                             <Typography variant="body1" component={'h4'} sx=
                                 {{
@@ -44,7 +44,7 @@ const Frame1 = () => {
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
                                         <Link href={'/user'}>
-                                            <button className={style.button} style={{ color: '#fff' }}>
+                                            <button className={style.button}>
                                                 Create your resume now
                                             </button>
                                         </Link>

@@ -11,7 +11,7 @@ const Top = () => {
                         Contact
                     </Typography>
                     <Typography component={'h2'} sx={{ fontWeight: 600, fontSize: 17, textAlign: 'center', mt: 2 }}>
-                        Home &nbsp; → &nbsp; <span style={{ color: '#F6CA56' }}>Contact</span>
+                        Home &nbsp; → &nbsp; <span className={style.text_yellow}>Contact</span>
                     </Typography>
                 </Box>
             </Box>

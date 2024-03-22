@@ -18,7 +18,7 @@ const Frame3 = () => {
                             lineHeight: { md: '80px' },
                             textTransform: 'capitalize'
                         }}>
-                            Create perfect <span style={{ color: "#6047F9" }}>resumes </span>for the modern <span style={{ color: "#6047F9" }}>job market</span>
+                            Create perfect <span className={style.text_purple} >resumes </span>for the modern <span className={style.text_purple}>job market</span>
                         </Typography>
                         <Typography variant='body1'
                             sx={{
@@ -37,7 +37,7 @@ const Frame3 = () => {
 
                         <Box sx={{ mt: 5 }}>
                             <Link href={'/user'}>
-                                <button className={style.button} style={{ color: '#fff' }}>
+                                <button className={style.button} >
                                     Create your resume now
                                 </button>
                             </Link>

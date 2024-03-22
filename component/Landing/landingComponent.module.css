@@ -3,6 +3,14 @@
     position: relative;
 }
 
+.text_purple {
+    color: #6047F9;
+}
+
+.text_yellow {
+    color: #F6CA56;
+}
+
 .bg {
     background-color: #000;
 }
@@ -20,13 +28,15 @@
     font-weight: 500;
     padding: 10px 30px;
     border-radius: 50px;
-    font-size:  larger;
+    font-size: larger;
     cursor: pointer;
+    color: #fff;
+    font-size: 17px;
 }
 
 .button {
     background-color: #6047F9;
-    
+
 }
 
 .button_yellow {

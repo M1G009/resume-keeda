@@ -38,7 +38,7 @@ const Banner = () => {
                         </Typography>
 
                         <Link href="/user">
-                            <button style={{ marginTop: 5, color: '#fff' }}
+                            <button 
                                 className={style.button}>
                                 Create your resume now
                             </button>

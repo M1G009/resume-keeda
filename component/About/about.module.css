@@ -124,6 +124,31 @@
     border-radius: 30px;
 }
 
+.icon_list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.ratings {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    color: #f6c956;
+}
+
+.text_yellow {
+    color: #F6CA56;
+}
+
+.border_yellow {
+    border: "1px solid #f6c956"
+}
+
+.border_purple {
+    border: "1px solid #4F46E5"
+}
 
 @media (max-width:992px) {
     .text::after {
