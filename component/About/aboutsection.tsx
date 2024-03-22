@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
 import style from './about.module.css'
 import Image from 'next/image'
-import Frame from './img/Frame.png'
+import Frame from './img/object.svg'
 
 const AboutSection = () => {
     return (

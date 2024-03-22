@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import frame3 from "./img/Frame-3.png"
+import frame3 from "./img/Frame3.svg"
 import style from './landingComponent.module.css'
 import Link from 'next/link';
 

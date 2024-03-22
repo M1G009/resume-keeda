@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import style from './landingComponent.module.css'
-import frame2 from './img/Frame-2.png'
+import frame2 from './img/Frame2.svg'
 import React from 'react'
 import Image from 'next/image'
 

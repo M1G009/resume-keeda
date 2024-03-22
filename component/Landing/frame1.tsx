@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import frame1 from "./img/Frame.png";
+import img from "./img/Frame.svg";
 import style from './landingComponent.module.css'
 import Link from 'next/link';
 
@@ -61,11 +61,11 @@ const Frame1 = () => {
                         display: 'flex', justifyContent: 'center'
                     }}>
                         <Box sx={{ display: { md: "block", xs: 'none' } }}>
-                            <Image src={frame1} alt="" width={500} height={500}></Image>
+                            <Image src={img} alt="" width={500} height={500}></Image>
                         </Box>
                         <Box sx={{ display: { md: "none", xs: 'block' } }}>
 
-                            <Image src={frame1} alt="" width={300} height={300}></Image>
+                            <Image src={img} alt="" width={300} height={300}></Image>
                         </Box>
 
 

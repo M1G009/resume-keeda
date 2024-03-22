@@ -68,7 +68,7 @@ export const removeSkills = async (id: any) => {
             'Authorization': `${token}`,
             'Content-Type': 'application/json'
         };
-        const res = await axiosInstance.post(`/api/v1/skills/remove/${id}`, {}, { headers })
+        const res = await axiosInstance.delete(`/api/v1/skills/remove/${id}`, { headers })
 
         return res
     } catch (error) {
