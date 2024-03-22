@@ -43,9 +43,11 @@ const Frame1 = () => {
                             <Box sx={{ marginY: '30px' }}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
-                                        <button className={style.button} style={{ color: '#fff' }}>
-                                            <Link href={'/user'}> Create your resume now</Link>
-                                        </button>
+                                        <Link href={'/user'}>
+                                            <button className={style.button} style={{ color: '#fff' }}>
+                                                Create your resume now
+                                            </button>
+                                        </Link>
                                     </Grid>
                                     <Grid item xs={12} md={6}>
                                         <button className={style.button_line}>

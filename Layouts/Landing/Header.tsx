@@ -89,29 +89,29 @@ function Header() {
               onClose={handleCloseNavMenu}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ py: 1.5, px: 4 }}>
-                  <Link href={page.path}>
+                <Link href={page.path}>
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ py: 1.5, px: 4 }}>
                     <Typography textAlign="right" style={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
                       {page.name}
                     </Typography>
-                  </Link>
-                </MenuItem>
+                  </MenuItem>
+                </Link>
               ))}
               {isMd && (
                 <>
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <button className={style.button_small}>
-                      <Link href="/user/login">
+                    <Link href="/user/login">
+                      <button className={style.button_small}>
                         Login
-                      </Link>
-                    </button>
+                      </button>
+                    </Link>
                   </MenuItem>
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <button className={style.button_small}>
-                      <Link href="/user/signup">
+                    <Link href="/user/signup">
+                      <button className={style.button_small}>
                         Signup
-                      </Link>
-                    </button>
+                      </button>
+                    </Link>
                   </MenuItem>
                 </>
               )}
@@ -122,32 +122,32 @@ function Header() {
           {!isMd && (
             <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
               {pages.map((page) => (
-                <Button
-                  key={page.name}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, mx: 2, color: router.pathname === page.path ? '#F6CA56' : 'white', fontWeight: 700 }}
-                  className={style.page_hover}
-                >
-                  <Link href={page.path}>
+                <Link href={page.path}>
+                  <Button
+                    key={page.name}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, mx: 2, color: router.pathname === page.path ? '#F6CA56' : 'white', fontWeight: 700 }}
+                    className={style.page_hover}
+                  >
                     {page.name}
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               ))}
             </Box>
           )}
 
           {!isMd && (
             <Box sx={{ flexGrow: 0 }}>
-              <button className={style.button2} >
-                <Link href="/user/login">
+              <Link href="/user/login">
+                <button className={style.button2} >
                   Login
-                </Link>
-              </button>
-              <button className={style.button1} >
-                <Link href="/user/signup">
+                </button>
+              </Link>
+              <Link href="/user/signup">
+                <button className={style.button1} >
                   Signup
-                </Link>
-              </button>
+                </button>
+              </Link>
             </Box>
           )}
         </Toolbar>

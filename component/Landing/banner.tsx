@@ -37,10 +37,13 @@ const Banner = () => {
                             and done within minutes - try now for free!
                         </Typography>
 
-                        <button style={{ marginTop: 5, color: '#fff' }}
-                            className={style.button}>
-                            <Link href="/user"> Create your resume now</Link>
-                        </button>
+                        <Link href="/user">
+                            <button style={{ marginTop: 5, color: '#fff' }}
+                                className={style.button}>
+                                Create your resume now
+                            </button>
+                        </Link>
+                        
                     </Box>
                     <Box className={style.blue_patch} sx={{ right: { xs: "-1rem", md: "-3rem" }, top: { xs: "18rem", md: "12rem" } }} />
                 </Container>

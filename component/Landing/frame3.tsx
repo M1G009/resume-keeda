@@ -36,9 +36,11 @@ const Frame3 = () => {
                         </Typography>
 
                         <Box sx={{ mt: 5 }}>
-                            <button className={style.button} style={{ color: '#fff' }}>
-                                <Link href={'/user'}>Create your resume now</Link>
-                            </button>
+                            <Link href={'/user'}>
+                                <button className={style.button} style={{ color: '#fff' }}>
+                                    Create your resume now
+                                </button>
+                            </Link>
                         </Box>
                     </Grid>
                     <Grid item md={4} sm={12}>
