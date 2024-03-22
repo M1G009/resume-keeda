@@ -11,12 +11,13 @@ const Banner = () => {
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Typography variant='h2' component={'h1'} sx={{
                             lineHeight: { xs: '60px', md: '100px' },
-                            fontSize: { xs: '40px', md: '60px' },
+                            fontSize: { xs: '40px', sm: '50px', md: '60px' },
                             fontWeight: '900',
                             mx: 'auto',
                             textTransform: 'capitalize',
                             textAlign: "center",
                             mb: '50px',
+                            pt: 3
 
                         }}>
                             Create A Resume <span className={style.text}>Fast</span> With Our <span className={style.text}>Easy</span> And <span className={style.text}>Free</span> Resume Builder</Typography>
@@ -28,7 +29,8 @@ const Banner = () => {
                             fontWeight: '400',
                             margin: '20px 0px',
                             overflow: " hidden",
-                            px: { xs: '2rem', md: '12rem' }
+                            px: { xs: '2rem', md: '12rem' },
+
                         }}>
                             Use professional field-tested resume templates that follow
                             the exact 'resume rules' employers look for. Easy to use
