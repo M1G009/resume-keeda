@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Container, Grid, Typography, useMediaQuery, ThemeProvider, createTheme, Divider } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getPersonaldetails } from '../../../services/Personal';
 
 interface AboutProps {
     personal: any;
@@ -15,13 +16,30 @@ const About: React.FC<AboutProps> = ({ personal, professionalDetail, user }) => 
 
     const [profession, setProfession] = useState<String>(professionalDetail.Profession);
     const [object, setObbject] = useState<String>(professionalDetail.Object);
-    const [userFirstName, setUserFirstName] = useState<string>(user.firstName);
-    const [userLastName, setUserLastName] = useState<string>(user.lastName);
-    const [userMail, setUserMail] = useState<string>(user.email)
+    const [userFirstName, setUserFirstName] = useState<string>('');
+    const [userLastName, setUserLastName] = useState<string>('');
+    const [userMail, setUserMail] = useState<string>('')
     const [userAddress, setUserAddress] = useState<string>(personal.Address)
     const [userDOB, setUserDOB] = useState<string>(personal.DOB)
     const [userImage, setUserImage] = useState<string>(personal.userProfileImage)
 
+
+    const fetchData = async () => {
+        try {
+            const userData: any = await getPersonaldetails();
+            setUserFirstName(userData.userId.firstName)
+            setUserLastName(userData.userId.lastName)
+            setUserMail(userData.userId.email)
+
+        } catch (error) {
+            console.log("Error fetching data:");
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData()
+    }, [])
 
     const calculateAge = (birthdate: string): number | undefined => {
         if (!birthdate) return undefined;
@@ -45,7 +63,7 @@ const About: React.FC<AboutProps> = ({ personal, professionalDetail, user }) => 
 
 
     return (
-        <Box id='about' style={{ padding: '100px 0 0' }}>
+        <Box id='about' sx={{ padding: '100px 0 0' }}>
             <ThemeProvider theme={theme}>
                 <Container maxWidth="lg">
                     <Box sx={{ mt: 2 }}>
@@ -58,7 +76,7 @@ const About: React.FC<AboutProps> = ({ personal, professionalDetail, user }) => 
                             <Grid item xs={12} md={5}>
                                 <Box sx={{ textAlign: isSmallScreen ? 'center' : 'left' }}>
 
-                                    <Box style={{ maxWidth: '100%', height: 'auto' }}>
+                                    <Box sx={{ maxWidth: '100%', height: 'auto' }}>
                                         <Image
                                             src={`${process.env.API_BASE_URL}/images/` + userImage}
                                             alt='Information Image'

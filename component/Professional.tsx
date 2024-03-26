@@ -18,7 +18,7 @@ const validationSchema = yup.object({
         .test('word-count', 'Object must contain between 100 and 200 words', value => {
             if (!value) return false;
             const wordCount = value.trim().split(/\s+/).length;
-            return wordCount >= 70 && wordCount <= 200;
+            return wordCount >= 20 && wordCount <= 200;
         })
 })
 
@@ -203,9 +203,9 @@ const Professional = ({ handleNext }: propsInterface) => {
                             <Box>
                                 <label htmlFor="object" className='text'>Object <span style={{ color: 'red' }}>*</span></label>
                                 <Box sx={{ position: 'relative' }}>
-                                    <Box sx={{ display: remainingWords <= 0 ? 'none' : 'block', position: 'absolute', right: 10, bottom: 0, zIndex: '999', color: 'green' }}>
+                                    {/* <Box sx={{ display: remainingWords <= 0 ? 'none' : 'block', position: 'absolute', right: 10, bottom: 0, zIndex: '999', color: 'green' }}>
                                         <p>Minimum words: {remainingWords}</p>
-                                    </Box>
+                                    </Box> */}
                                     <textarea
                                         className={style.textarea}
                                         id="Object"

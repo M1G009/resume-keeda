@@ -1,17 +1,31 @@
 import { Box, Container, Typography, Grid } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CallIcon from '@mui/icons-material/Call';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import PlaceIcon from '@mui/icons-material/Place';
 import style from './theme3.module.css'
+import { getPersonaldetails } from '../../../services/Personal';
 
 const Contact = ({ personal, user }: any) => {
 
     const [userMail, setUserMail] = useState<string>(user.email)
     const [userAddress, setUserAddress] = useState<string>(personal.Address)
     const [userMobile, setUserMobile] = useState<string>(personal.mobileNumber)
+    const fetchData = async () => {
+        try {
+            const userData: any = await getPersonaldetails();
+            setUserMail(userData.userId.email)
 
+        } catch (error) {
+            console.log("Error fetching data:");
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData()
+    }, [])
 
     return (
         <Box id="contact" sx={{ pt: 4, pb: 6 }}>

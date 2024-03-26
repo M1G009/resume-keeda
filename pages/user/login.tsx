@@ -88,10 +88,10 @@ const Login: React.FC = () => {
                 type={showPassword ? 'text' : 'password'}
               />
               <Button onClick={togglePasswordVisibility}>
-                {showPassword ? <VisibilityOffIcon style={{ color: 'white' }} /> : <RemoveRedEyeIcon style={{ color: 'white' }} />}
+                {showPassword ? <VisibilityOffIcon sx={{ color: 'white' }} /> : <RemoveRedEyeIcon sx={{ color: 'white' }} />}
               </Button>
             </Box>
-            <Box className={style.btn} style={{ marginBottom: '20px' }}>
+            <Box className={style.btn} sx={{ marginBottom: '20px' }}>
               <button className={style.button} type="submit" >
                 Login
               </button>

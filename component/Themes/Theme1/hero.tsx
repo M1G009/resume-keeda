@@ -1,5 +1,5 @@
 import { Box, List, ListItem, ListItemButton, ListItemIcon, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Image from 'next/image';
@@ -7,19 +7,36 @@ import style from './theme1.module.css'
 import dribbble_icon from './img/dribble-icon.png'
 import stackoverflow_icon from './img/stack-overflow_icon.png'
 import behance_icon from './img/behance_icon.png'
+import { getPersonaldetails } from '../../../services/Personal';
 
 
 
 const Hero = ({ professionalDetail, user }: any) => {
 
     const [profession, setProfession] = useState<string>(professionalDetail.Profession)
-    const [userFirstName, setUserFirstName] = useState<string>(user.firstName);
-    const [userLastName, setUserLastName] = useState<string>(user.lastName);
+    const [userFirstName, setUserFirstName] = useState<string>('');
+    const [userLastName, setUserLastName] = useState<string>('');
     const [linkedinurl, setLinkedinurl] = useState<string>(professionalDetail.linkedinurl)
     const [stackoverflowurl, setStackoverflowurl] = useState<string>(professionalDetail.stackoverflowurl)
     const [github, setGithub] = useState<string>(professionalDetail.github)
     const [dribble, setDribble] = useState<string>(professionalDetail.dribble)
     const [behance, setBehance] = useState<string>(professionalDetail.behance)
+    
+    const fetchData = async () => {
+        try {
+            const userData: any = await getPersonaldetails();
+            setUserFirstName(userData.userId.firstName)
+            setUserLastName(userData.userId.lastName)
+
+        } catch (error) {
+            console.log("Error fetching data:");
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData()
+    }, [])
 
 
     return (

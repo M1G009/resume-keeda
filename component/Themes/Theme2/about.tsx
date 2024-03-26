@@ -1,19 +1,34 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import WavingHandIcon from '@mui/icons-material/WavingHand';
 import Image from 'next/image';
+import { getPersonaldetails } from '../../../services/Personal';
 
 const About = ({ user, professionalDetail, personal }: any) => {
 
     const [profession, setProfession] = useState<String>(professionalDetail.Profession)
-    const [userFirstName, setUserFirstName] = useState<String>(user.firstName)
-    const [userLastName, setUserLastName] = useState<String>(user.lastName)
+    const [userFirstName, setUserFirstName] = useState<String>('')
+    const [userLastName, setUserLastName] = useState<String>('')
     const [userExp, setuserExp] = useState<number>(professionalDetail.yearsOfExperience)
     const [userImage, setUserImage] = useState<string>(personal.userProfileImage)
     const [object, setObbject] = useState<String>(professionalDetail.Object);
 
 
+    const fetchData = async () => {
+        try {
+            const userData: any = await getPersonaldetails();
+            setUserFirstName(userData.userId.firstName)
+            setUserLastName(userData.userId.lastName)
 
+        } catch (error) {
+            console.log("Error fetching data:");
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData()
+    }, [])
 
 
     return (
@@ -43,29 +58,18 @@ const About = ({ user, professionalDetail, personal }: any) => {
                                             </Box>
 
                                         )}
-                                        {/* <Box className="about-item" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pb: 2, pt: 2, borderBottom: '2px solid', borderBottomColor: '#1B4332' }}>
-                                            <Typography sx={{ fontWeight: '800', fontSize: '40px' }}>1200+</Typography>
-                                            <Typography sx={{ color: '#D8F3DC' }}>COMPLETED PROJECT</Typography>
-                                        </Box> */}
+                                       
                                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pb: 2, pt: 2 }}>
                                             <Typography sx={{ fontWeight: '800', fontSize: '40px' }}>100%</Typography>
                                             <Typography sx={{ color: '#D8F3DC' }}>CLIENT SATISFACTION</Typography>
                                         </Box>
                                     </Box>
                                 </Box>
-                                {/* <Box sx={{ display: 'flex', alignItems: 'cenetr', gap: '30px' }}>
-                                    <Button variant='contained' sx={{ borderRadius: '50px', py: 1.5, px: 4, bgcolor: '#D8F3DC', color: 'black', fontWeight: 600 }}> GET IN TOUCH <EastIcon /> </Button>
-                                    <ul style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <li style={{ borderRadius: '50%', border: 'solid 2px #D8F3DC', padding: '10px', listStyle: 'none', marginRight: '15px' }}><FacebookIcon /></li>
-                                        <li style={{ borderRadius: '50%', border: 'solid 2px #D8F3DC', padding: '10px', listStyle: 'none', marginRight: '15px' }}><TwitterIcon /></li>
-                                        <li style={{ borderRadius: '50%', border: 'solid 2px #D8F3DC', padding: '10px', listStyle: 'none', marginRight: '15px' }}><LinkedInIcon /></li>
-                                    </ul>
-
-                                </Box> */}
+                              
                             </Grid>
                             <Grid item xs={12} md={5} justifyContent="center">
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                    <Box style={{ maxWidth: '100%', height: 'auto' }}>
+                                    <Box sx={{ maxWidth: '100%', height: 'auto' }}>
                                         <Image
                                             src={`${process.env.API_BASE_URL}/images/` + userImage}
                                             alt='Information Image'

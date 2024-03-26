@@ -31,7 +31,6 @@ export const getServerSideProps = (async (context) => {
   const repo: any = await res.json()
 
   console.log(repo);
-
   // Pass data to the page via props
   return { props: { userData: repo.data } }
 }) satisfies GetServerSideProps<{ userData: any }>

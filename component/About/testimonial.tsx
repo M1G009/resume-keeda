@@ -116,7 +116,7 @@ const Testimonial = () => {
                 </Box>
 
                 <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-                    <button className={style.button} style={{ color: '#fff' }}>Read More</button>
+                    <button className={style.button}>Read More</button>
                 </Box>
             </Container>
         </Box>

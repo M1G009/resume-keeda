@@ -90,7 +90,7 @@ function Header() {
               {pages.map((page) => (
                 <Link href={page.path}>
                   <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ py: 1.5, px: 4 }}>
-                    <Typography textAlign="right" style={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
+                    <Typography textAlign="right" className={style.page_hover} sx={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
                       {page.name}
                     </Typography>
                   </MenuItem>
@@ -123,7 +123,7 @@ function Header() {
               {pages.map((page) => (
                 <Link key={page.name} href={page.path}>
                   <MenuItem onClick={handleCloseNavMenu} sx={{ py: 1.5, px: 4 }}>
-                    <Typography textAlign="right" style={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
+                    <Typography textAlign="right" className={style.page_hover} sx={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
                       {page.name}
                     </Typography>
                   </MenuItem>

@@ -1,7 +1,8 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './theme3.module.css';
 import Image from 'next/image';
+import { getPersonaldetails } from '../../../services/Personal';
 
 const Hero = ({ user, professional, personal }: any) => {
     const [profession, setProfession] = useState<String>(professional.Profession);
@@ -9,7 +10,21 @@ const Hero = ({ user, professional, personal }: any) => {
     const [userLastName, setUserLastName] = useState<String>(user.lastName);
     const [userExp, setUserExp] = useState<number>(professional.yearsOfExperience);
     const [userImage, setUserImage] = useState<string>(personal.userProfileImage);
+    const fetchData = async () => {
+        try {
+            const userData: any = await getPersonaldetails();
+            setUserFirstName(userData.userId.firstName)
+            setUserLastName(userData.userId.lastName)
 
+        } catch (error) {
+            console.log("Error fetching data:");
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData()
+    }, [])
 
 
     return (
