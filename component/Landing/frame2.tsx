@@ -1,5 +1,5 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
-import style from './landingComponent.module.css'
+import styles from './landingComponent.module.css'
 import frame2 from './img/Frame2.svg'
 import React from 'react'
 import Image from 'next/image'
@@ -21,7 +21,7 @@ const Frame2 = () => {
               <Box sx={{ display: { md: "none", xs: 'block' } }}>
                 <Image src={frame2} alt="" width={300} height={300}></Image>
               </Box>
-              <Box className={style.yellow_patch} sx={{ left: { xs: "2rem", md: '-10rem' }, top: { xs: '20rem', md: '-4rem' } }} />
+              <Box className={styles.yellow_patch} sx={{ left: { xs: "2rem", md: '-10rem' }, top: { xs: '20rem', md: '-4rem' } }} />
 
             </Grid>
             <Grid item md={6} xs={12} >
@@ -44,9 +44,9 @@ const Frame2 = () => {
                     lineHeight: { xs: '50px', md: '55px' },
                     mt: 2
                   }}>
-                  Create a<span className={style.text_yellow}> professional </span>
+                  Create a<span className={styles.text_yellow}> professional </span>
                   story in minutes. Use
-                  our <span className={style.text_yellow}>cover letter maker.</span>
+                  our <span className={styles.text_yellow}>cover letter maker.</span>
                 </Typography>
 
                 <Typography variant="body1" component={'h4'} sx=
@@ -67,7 +67,7 @@ const Frame2 = () => {
                   formatting. Be persuasive without effort!
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: "center", my: 5 }}>
-                  <button className={style.button_yellow} >
+                  <button className={styles.button_yellow} >
                     Create Cover Letter
                   </button>
                 </Box>

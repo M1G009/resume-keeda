@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography } from '@mui/material'
 import React from 'react'
-import style from './landingComponent.module.css'
+import styles from './landingComponent.module.css'
 import Link from 'next/link'
 
 const Banner = () => {
@@ -20,7 +20,7 @@ const Banner = () => {
                             pt: 3
 
                         }}>
-                            Create A Resume <span className={style.text}>Fast</span> With Our <span className={style.text}>Easy</span> And <span className={style.text}>Free</span> Resume Builder</Typography>
+                            Create A Resume <span className={styles.text}>Fast</span> With Our <span className={styles.text}>Easy</span> And <span className={styles.text}>Free</span> Resume Builder</Typography>
                         <Typography component={'h2'} sx={{
                             fontSize: { xs: '16px', md: '18px' },
                             lineHeight: '30px',
@@ -39,13 +39,13 @@ const Banner = () => {
 
                         <Link href="/user">
                             <button 
-                                className={style.button}>
+                                className={styles.button}>
                                 Create your resume now
                             </button>
                         </Link>
                         
                     </Box>
-                    <Box className={style.blue_patch} sx={{ right: { xs: "-1rem", md: "-3rem" }, top: { xs: "18rem", md: "12rem" } }} />
+                    <Box className={styles.blue_patch} sx={{ right: { xs: "-1rem", md: "-3rem" }, top: { xs: "18rem", md: "12rem" } }} />
                 </Container>
             </Box>
         </Box>

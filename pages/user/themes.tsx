@@ -5,7 +5,7 @@ import { getThemes } from '../../services/themes';
 import Image from 'next/image';
 import { useFormik } from 'formik';
 import { AddURL, checkURL, getURL } from '../../services/currentTheme';
-import style from '../../styles/user.module.css';
+import styles from '../../styles/user.module.css';
 import ClearIcon from '@mui/icons-material/Clear';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { ToastContainer, toast } from 'react-toastify';
@@ -115,7 +115,7 @@ const Themes = () => {
     };
 
     return (
-        <div className={style.bg}>
+        <Box className={styles.bg}>
             <DashboardLayout>
                 <Box>
                     <Typography sx={{ fontSize: '30px', textAlign: 'center', fontWeight: '500', color: '#fff', textTransform: 'capitalize', margin: '20px 0px' }}>
@@ -143,7 +143,7 @@ const Themes = () => {
                     >
                         <Box className='mainbox'>
                             <Box sx={{ display: 'flex', justifyContent: 'end' }}>
-                                <button className={style.closebutton} onClick={() => handleClose()}> <ClearIcon /></button>
+                                <button className={styles.closebutton} onClick={() => handleClose()}> <ClearIcon /></button>
                             </Box>
                             <DialogTitle>
                                 Generate / Check URL
@@ -158,12 +158,12 @@ const Themes = () => {
                                             name='slug'
                                             onChange={formik.handleChange}
                                             value={formik.values.slug}
-                                            className={style.input}
+                                            className={styles.input}
 
                                         />
                                         <Box sx={{ position: 'absolute', top: '10px', right: '10px' }}>
                                             <Tooltip title={copyText}>
-                                                <Box className={style.copybutton} onClick={copyClick}><ContentCopyIcon sx={{ color: '#fff' }} /></Box>
+                                                <Box className={styles.copybutton} onClick={copyClick}><ContentCopyIcon sx={{ color: '#fff' }} /></Box>
                                             </Tooltip>
                                         </Box>
                                     </form>
@@ -173,7 +173,7 @@ const Themes = () => {
                             <DialogActions>
                                 <button
                                     type='submit'
-                                    className={style.submit_bottun}
+                                    className={styles.submit_bottun}
                                     onClick={() => { formik.handleSubmit() }}
                                     disabled={!formik.values.slug || formik.isSubmitting} // Disable if URL field is empty or form is submitting
                                 >
@@ -181,7 +181,7 @@ const Themes = () => {
                                 </button>
                                 <button
                                     type='button'
-                                    className={style.submit_bottun}
+                                    className={styles.submit_bottun}
                                     onClick={() => { window.open(`http://localhost:3000/${data?.slug}`), handleClose() }}
                                     disabled={!data?.slug || formik.isSubmitting} // Disable if no URL is generated or form is submitting
                                 >
@@ -193,7 +193,7 @@ const Themes = () => {
                     </Dialog>
                 </Box>
             </DashboardLayout>
-        </div>
+        </Box>
     );
 };
 

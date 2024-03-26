@@ -1,7 +1,7 @@
 import { Box, Grid, Container, Typography } from '@mui/material'
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
-import style from './theme3.module.css'
+import styles from './theme3.module.css'
 import BoltIcon from '@mui/icons-material/Bolt';
 import Skills from './skills';
 import Resume from './resume';
@@ -62,7 +62,7 @@ const About = ({ skilldetail, workexp, educationdetail, personal, professional, 
 
                     <Grid container spacing={2} className="item">
                         <Grid item md={6} sx={{ display: { md: 'block', xs: 'none' } }} >
-                            <Box className={style.aboutimg} sx={{ background: `url(${process.env.API_BASE_URL}/images/${userImage})` }} >
+                            <Box className={styles.aboutimg} sx={{ background: `url(${process.env.API_BASE_URL}/images/${userImage})` }} >
                                 <Box >
 
                                     {/* <Image
@@ -95,7 +95,7 @@ const About = ({ skilldetail, workexp, educationdetail, personal, professional, 
                                             my: '20px'
                                         }}>
                                         l’m <br />
-                                        <span style={{ color: '#28E98C' }}>{profession}</span>
+                                        <span styles={{ color: '#28E98C' }}>{profession}</span>
                                     </Typography>
 
                                     <Typography variant="body1" color="#DDD" sx={{ fontSize: '19px' }}>
@@ -104,13 +104,13 @@ const About = ({ skilldetail, workexp, educationdetail, personal, professional, 
 
                                     <Box sx={{ mt: 4 }}>
 
-                                        <li style={{ color: '#28E98C', fontSize: '20px', padding: '5px 0px' }}>
-                                            <span style={{ color: '#fff', fontWeight: '600' }}>Name : </span>
-                                            <span style={{ color: '#DDD' }}>{firstname} {lastname}</span>
+                                        <li styles={{ color: '#28E98C', fontSize: '20px', padding: '5px 0px' }}>
+                                            <span styles={{ color: '#fff', fontWeight: '600' }}>Name : </span>
+                                            <span styles={{ color: '#DDD' }}>{firstname} {lastname}</span>
                                         </li>
-                                        <li style={{ color: '#28E98C', fontSize: '20px', padding: '5px 0px' }}>
-                                            <span style={{ color: '#fff', fontWeight: '600' }}>Age  : </span>
-                                            <span style={{ color: '#DDD' }}>{age}</span>
+                                        <li styles={{ color: '#28E98C', fontSize: '20px', padding: '5px 0px' }}>
+                                            <span styles={{ color: '#fff', fontWeight: '600' }}>Age  : </span>
+                                            <span styles={{ color: '#DDD' }}>{age}</span>
                                         </li>
                                     </Box>
                                 </Box>

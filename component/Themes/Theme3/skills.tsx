@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Box, Typography } from '@mui/material';
-import style from './theme3.module.css'
+import styles from './theme3.module.css'
 
 
 interface Skill {
@@ -31,9 +31,9 @@ const Skills = ({ skill }: any) => {
             </Box>
             {skillData.map((data, index) => {
                 return <Box key={index} sx={{ my: 2 }}>
-                    <Box className={style.skillbox} sx={{ display: 'flex', flexDirection: 'column' }} >
+                    <Box className={styles.skillbox} sx={{ display: 'flex', flexDirection: 'column' }} >
                         <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%', mb: 1 }}>
-                            <Box className={style.skillname}>
+                            <Box className={styles.skillname}>
                                 {data.name}
                             </Box>
                             <Box>

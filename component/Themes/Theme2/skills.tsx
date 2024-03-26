@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import style from './thmem2.module.css'
+import styles from './thmem2.module.css'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
 
@@ -157,8 +157,8 @@ const Skills = ({ skilldetail }: any) => {
 
     const renderSkillItem = (skill: Skill, index: number) => (
         <Grid key={index} item xs={6} sm={4} md={3} lg={2}>
-            <Box className={style.border_box} sx={{ textAlign: 'center' }}>
-                <Box className={style.bg_round} sx={{ borderRadius: '50%', width: '100px', height: '100px', overflow: 'hidden', margin: 'auto' }}>
+            <Box className={styles.border_box} sx={{ textAlign: 'center' }}>
+                <Box className={styles.bg_round} sx={{ borderRadius: '50%', width: '100px', height: '100px', overflow: 'hidden', margin: 'auto' }}>
                     {getImageForSkill(skill.name) && <Image src={getImageForSkill(skill.name)} width={70} height={70} alt='skill'></Image>}
                 </Box>
                 <Typography sx={{ fontSize: '24px', fontWeight: '700' }}>{skill.rate * 10}%</Typography>
@@ -174,7 +174,7 @@ const Skills = ({ skilldetail }: any) => {
         <Box id='skills' sx={{ bgcolor: "#111010", py: 10 }}>
             <Container>
                 <Box>
-                    <Typography sx={{ fontSize: "30px", fontWeight: '700' }}><span style={{ color: '#FF8A00' }}>M</span>y Skills Here</Typography>
+                    <Typography sx={{ fontSize: "30px", fontWeight: '700' }}><span styles={{ color: '#FF8A00' }}>M</span>y Skills Here</Typography>
 
                     <Box>
                         <Typography variant='h4' align='right' sx={{ my: 5, fontSize: { xs: '24px', sm: '28px', md: '32px' }, textIndent: { xs: '10%', sm: '20%', md: '40%' } }}>

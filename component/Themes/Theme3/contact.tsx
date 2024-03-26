@@ -4,7 +4,7 @@ import CallIcon from '@mui/icons-material/Call';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import PlaceIcon from '@mui/icons-material/Place';
-import style from './theme3.module.css'
+import styles from './theme3.module.css'
 import { getPersonaldetails } from '../../../services/Personal';
 
 const Contact = ({ personal, user }: any) => {
@@ -40,25 +40,25 @@ const Contact = ({ personal, user }: any) => {
                     </Box>
                 </Box>
                 <Typography variant="h4" color="initial" sx={{ textAlign: 'center', mb: 5 }}>
-                    Let's Get <span style={{ color: '#28E98C' }}>in Touch!</span>
+                    Let's Get <span styles={{ color: '#28E98C' }}>in Touch!</span>
                 </Typography>
 
                 <Grid container spacing={3}>
                     <Grid item md={4} sm={6} xs={12}>
-                        <Box className={style.contactBox}>
-                            <Box className={style.iconbg}><PhoneIcon sx={{ color: '#000' }} /></Box>
+                        <Box className={styles.contactBox}>
+                            <Box className={styles.iconbg}><PhoneIcon sx={{ color: '#000' }} /></Box>
                             <Typography variant="body1" sx={{ fontSize: { xs: '16px', sm: '18px', md: '20px' }, color: '#DDDDDD' }}>+91 {userMobile}</Typography>
                         </Box>
                     </Grid>
                     <Grid item md={4} sm={6} xs={12}>
-                        <Box className={style.contactBox}>
-                            <Box className={style.iconbg}><EmailIcon sx={{ color: '#000' }} /></Box>
+                        <Box className={styles.contactBox}>
+                            <Box className={styles.iconbg}><EmailIcon sx={{ color: '#000' }} /></Box>
                             <Typography variant="body1" sx={{ fontSize: { xs: '16px', sm: '18px', md: '20px' }, color: '#DDDDDD' }}>{userMail}</Typography>
                         </Box>
                     </Grid>
                     <Grid item md={4} sm={6} xs={12}>
-                        <Box className={style.contactBox}>
-                            <Box className={style.iconbg}><PlaceIcon sx={{ color: '#000' }} /></Box>
+                        <Box className={styles.contactBox}>
+                            <Box className={styles.iconbg}><PlaceIcon sx={{ color: '#000' }} /></Box>
                             <Typography variant="body1" sx={{ fontSize: { xs: '16px', sm: '18px', md: '20px' }, color: '#DDDDDD' }}>{userAddress}</Typography>
                         </Box>
                     </Grid>

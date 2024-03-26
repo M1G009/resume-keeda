@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material';
-import style from "./thmem2.module.css";
+import styles from "./thmem2.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -78,14 +78,14 @@ const Experience = ({ workexp }: any) => {
         <Box id="experience" sx={{ bgcolor: "#111010", py: 10 }}>
             <Container>
                 <Box>
-                    <Typography sx={{ my: 5, fontSize: '30px', fontWeight: '700' }}><span style={{ color: '#FF8A00' }}>E</span>xperience</Typography>
+                    <Typography sx={{ my: 5, fontSize: '30px', fontWeight: '700' }}><span styles={{ color: '#FF8A00' }}>E</span>xperience</Typography>
                 </Box>
 
                 <Box className="slider-container">
                     <Slider {...settings}>
                         {workExperience.map((el, index) => (
                             <Box gap={2} key={index}>
-                                <Typography className={style.rounded}>{formatDate(el.startDate)}  {formatDate(el.endDate)} </Typography>
+                                <Typography className={styles.rounded}>{formatDate(el.startDate)}  {formatDate(el.endDate)} </Typography>
                                 <Box sx={{ display: "flex", flexDirection: 'column', overflow: 'auto' }}>
                                     <Typography sx={{ color: '#D8F3DC', fontSize: '25px', fontWeight: '700', mt: 2 }}>{el.companyName}</Typography>
                                     <Typography variant='body1' sx={{ mt: 2, fontSize: '25px', fontWeight: '700' }}>{el.title}</Typography>

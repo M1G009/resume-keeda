@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Box, Button, Container, TextField, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
-import style from '../../styles/user.module.css'
+import styles from '../../styles/user.module.css'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Link from 'next/link';
@@ -53,18 +53,18 @@ const Signin = () => {
   const { errors, touched, values, handleChange, handleBlur, handleSubmit } = formik;
 
   return (
-    <Box sx={{ display: 'grid', placeItems: 'center' }} className={style.bg}>
+    <Box sx={{ display: 'grid', placeItems: 'center' }} className={styles.bg}>
       <Container maxWidth="sm">
         <Box sx={{ position: 'absolute', top: '30px', left: '30px' }}>
           <Link href="/">
-            <button className={style.homebutton} >
+            <button className={styles.homebutton} >
               <HomeIcon />
             </button>
           </Link>
         </Box>
-        <form className={style.form} onSubmit={handleSubmit}>
-          <Typography id={style.heading}> Sign Up </Typography>
-          <Box className={style.field}>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <Typography id={styles.heading}> Sign Up </Typography>
+          <Box className={styles.field}>
             <TextField
               fullWidth
               name="firstName"
@@ -73,11 +73,11 @@ const Signin = () => {
               onBlur={handleBlur}
               error={Boolean(touched.firstName && errors.firstName)}
               placeholder="First Name"
-              className={style.input_field}
+              className={styles.input_field}
               type="text"
             />
           </Box>
-          <Box className={style.field}>
+          <Box className={styles.field}>
             <TextField
               fullWidth
               name="lastName"
@@ -86,11 +86,11 @@ const Signin = () => {
               onBlur={handleBlur}
               error={Boolean(touched.lastName && errors.lastName)}
               placeholder="Last Name"
-              className={style.input_field}
+              className={styles.input_field}
               type="text"
             />
           </Box>
-          <Box className={style.field}>
+          <Box className={styles.field}>
             <TextField
               fullWidth
               name="email"
@@ -99,11 +99,11 @@ const Signin = () => {
               onBlur={handleBlur}
               error={Boolean(touched.email && errors.email)}
               placeholder="email"
-              className={style.input_field}
+              className={styles.input_field}
               type="email"
             />
           </Box>
-          <Box className={style.field}>
+          <Box className={styles.field}>
             <TextField
               placeholder="Password"
               fullWidth
@@ -112,7 +112,7 @@ const Signin = () => {
               onChange={handleChange}
               onBlur={handleBlur}
               error={Boolean(touched.password && errors.password)}
-              className={style.input_field}
+              className={styles.input_field}
               type={showPassword ? 'text' : 'password'}
             />
             <Button onClick={togglePasswordVisibility}>
@@ -120,15 +120,15 @@ const Signin = () => {
             </Button>
           </Box>
 
-          <Box className={style.btn} sx={{ marginBottom: '20px' }}>
+          <Box className={styles.btn} sx={{ marginBottom: '20px' }}>
 
-            <button className={style.button} type="submit">
+            <button className={styles.button} type="submit">
               Sign Up
             </button>
 
           </Box>
           <Box sx={{ textAlign: 'center', mb: 4 }}>
-            <Typography>Already have account? <Link href='/user/login' className={style.link}>Get started</Link></Typography>
+            <Typography>Already have account? <Link href='/user/login' className={styles.link}>Get started</Link></Typography>
           </Box>
         </form>
       </Container>

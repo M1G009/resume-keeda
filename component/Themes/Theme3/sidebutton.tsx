@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import style from './theme3.module.css';
+import styles from './theme3.module.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import dribbble_icon from './img/dribble-icon.png'
 import stackoverflow_icon from './img/stack-overflow_icon.png'
@@ -39,11 +39,11 @@ const SideButton = ({ data }: any) => {
     const [behance, setBehance] = useState<string>(data.behance)
 
     const icons = [
-        { url: linkedinurl, img: dribbble_icon },
+        { url: linkedinurl, img: linkedin_icon },
         { url: stackoverflowurl, img: stackoverflow_icon },
         { url: github, img: behance_icon },
         { url: dribble, img: github_icon },
-        { url: behance, img: linkedin_icon },
+        { url: behance, img: dribbble_icon },
     ]
     const [state, setState] = React.useState({
         right: false,
@@ -77,14 +77,14 @@ const SideButton = ({ data }: any) => {
             </List>
             <Divider />
             <List>
-                <ul style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '20px', listStyle: 'none', justifyContent: 'center' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '20px', listStyle: 'none', justifyContent: 'center' }}>
                     {icons.map((el, i) => (
-                        <li className={style.icons} key={el.url}>
+                        <li className={styles.icons} key={el.url}>
                             <Image src={el.img} alt='icons' width={25} height={25} ></Image>
                         </li>
                     ))}
 
-                </ul>
+                </Box>
 
             </List>
         </Box>

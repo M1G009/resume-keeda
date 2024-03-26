@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import { Button, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import {  Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import * as yup from 'yup';
 import { Project, ProjectUpdate, getProjects, removeProject } from '../services/Project';
 import Image from 'next/image';
-import style from "./forms.module.css"
+import styles from "./forms.module.css"
 import { useRouter } from 'next/router';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -118,7 +117,7 @@ const Personal: React.FC = () => {
                   <label htmlFor="images" className='text'>Images</label>
                   <Box>
                     <input
-                      className={style.input}
+                      className={styles.input}
                       type="file"
                       id="images"
                       onChange={(event) => {
@@ -126,7 +125,7 @@ const Personal: React.FC = () => {
                       }}
                     />
                     {formik.errors.images && formik.touched.images && (
-                      <div className={style.error}>{`${formik.errors.images}`}</div>
+                      <div className={styles.error}>{`${formik.errors.images}`}</div>
                     )}
                   </Box>
                 </Box>
@@ -137,7 +136,7 @@ const Personal: React.FC = () => {
                   <label htmlFor="title" className='text'>Title</label>
                   <Box>
                     <input
-                      className={style.input}
+                      className={styles.input}
                       id="title"
                       name="title"
                       type="text"
@@ -147,7 +146,7 @@ const Personal: React.FC = () => {
                     />
                   </Box>
                   {formik.errors.title && formik.touched.title && (
-                    <div className={style.error}>{formik.errors.title}</div>
+                    <div className={styles.error}>{formik.errors.title}</div>
                   )}
                 </Box>
               </Grid>
@@ -157,7 +156,7 @@ const Personal: React.FC = () => {
                   <label htmlFor="url" className='text'>URL</label>
                   <Box>
                     <input
-                      className={style.input}
+                      className={styles.input}
                       id="url"
                       name="url"
                       type="url"
@@ -167,7 +166,7 @@ const Personal: React.FC = () => {
                     />
                   </Box>
                   {formik.errors.url && formik.touched.url && (
-                    <div className={style.error}>{formik.errors.url}</div>
+                    <div className={styles.error}>{formik.errors.url}</div>
                   )}
                 </Box>
               </Grid>
@@ -178,7 +177,7 @@ const Personal: React.FC = () => {
                   <Box>
                     <Box>
                       <textarea
-                        className={style.textarea}
+                        className={styles.textarea}
                         id="description"
                         name="description"
                         rows={4}
@@ -188,7 +187,7 @@ const Personal: React.FC = () => {
                       />
                     </Box>
                     {formik.errors.description && formik.touched.description && (
-                      <div className={style.error}>{formik.errors.description}</div>
+                      <div className={styles.error}>{formik.errors.description}</div>
                     )}
                   </Box>
                 </Box>
@@ -196,15 +195,15 @@ const Personal: React.FC = () => {
 
               <Grid item xs={2} mt={3} mb={8} mx={2}>
                 <Box>
-                  <button className={style.button} type="submit">
-                    <span className={style.button_hover}>Add</span>
+                  <button className={styles.button} type="submit">
+                    <span className={styles.button_hover}>Add</span>
                   </button>
                 </Box>
               </Grid>
               <Grid item xs={2} mt={3} mb={8} mx={2}>
                 <Box>
-                  <button className={style.button} type='button' onClick={() => { themepage() }}>
-                    <span className={style.button_hover}>Finish</span>
+                  <button className={styles.button} type='button' onClick={() => { themepage() }}>
+                    <span className={styles.button_hover}>Finish</span>
                   </button>
                 </Box>
               </Grid>
@@ -234,10 +233,10 @@ const Personal: React.FC = () => {
                   <TableCell sx={{ textAlign: 'center' }}>{el.title}</TableCell>
                   <TableCell sx={{ textAlign: 'center' }}>{el.description}</TableCell>
                   <TableCell>
-                    <button className={style.remove_button} onClick={() => deleteHandler(el.id)}>
+                    <button className={styles.remove_button} onClick={() => deleteHandler(el.id)}>
                       Remove
                     </button>
-                    <button className={style.remove_button} onClick={() => updateHandler(el, el.id)}>
+                    <button className={styles.remove_button} onClick={() => updateHandler(el, el.id)}>
                       Update
                     </button>
                   </TableCell>

@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
-import style from './about.module.css'
+import styles from './about.module.css'
 import Image from 'next/image'
 import Frame from './img/object.svg'
 
@@ -9,9 +9,9 @@ const AboutSection = () => {
         <>
             <Container >
                 <Box mt={6} position={"relative"}>
-                    <Box className={style.blue_patch} sx={{ top: 0, right: { xs: 0, md: '-20rem' } }} />
+                    <Box className={styles.blue_patch} sx={{ top: 0, right: { xs: 0, md: '-20rem' } }} />
                     <Typography component={'h2'} sx={{ textAlign: 'center', fontSize: { xs: '35px', md: '55px' } }}>
-                        <span className={style.text}>RESUME</span> is your ultimate career toolbox.
+                        <span className={styles.text}>RESUME</span> is your ultimate career toolbox.
                     </Typography>
 
 
@@ -25,13 +25,13 @@ const AboutSection = () => {
                         <Grid item xs={12} md={6}>
                             <Box sx={{ ml: { md: '20px', xs: 0 } }}>
                                 <ul>
-                                    <li className={style.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                    <li className={style.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                    <li className={style.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                    <li className={style.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                    <li className={style.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
                                 </ul>
-                                <button className={style.button} >Read More</button>
+                                <button className={styles.button} >Read More</button>
                             </Box>
                         </Grid>
                     </Grid>

@@ -2,7 +2,7 @@ import { Box, Typography, Container, Grid } from '@mui/material'
 import React, { useState } from 'react'
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import Image from 'next/image';
-import style from './theme3.module.css'
+import styles from './theme3.module.css'
 
 interface Project {
     images: string,
@@ -30,15 +30,15 @@ const Project = ({ data }: any) => {
                     <Grid container spacing={2}>
                         {projectData.map((el, index) => (
                             <Grid key={index} item md={4} sm={6} xs={12}>
-                                <Box className={style.card} sx={{ backgroundColor: index % 2 === 0 ? '#FFFFFF26' : '#131C1F' }}>
-                                    <Box className={style.img} >
+                                <Box className={styles.card} sx={{ backgroundColor: index % 2 === 0 ? '#FFFFFF26' : '#131C1F' }}>
+                                    <Box className={styles.img} >
                                         <Image src={`${process.env.API_BASE_URL}/images/` + el.images} alt='project image' width={337} height={350} style={{ borderRadius: '10px', overflow: 'hidden' }} ></Image>
                                     </Box>
-                                    <Box className={style.footer}>
+                                    <Box className={styles.footer}>
                                         <Typography variant="body1" color="white" sx={{ fontSize: '18px', textTransform: 'capitalize' }}>
                                             {el.title}
                                         </Typography>
-                                        <button className={style.demoButton} onClick={() => window.open(`${el.url}`)}>demo</button>
+                                        <button className={styles.demoButton} onClick={() => window.open(`${el.url}`)}>demo</button>
                                     </Box>
                                 </Box>
                             </Grid>

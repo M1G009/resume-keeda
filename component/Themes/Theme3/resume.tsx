@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
-import style from './theme3.module.css'
+import styles from './theme3.module.css'
 
 interface EducationDetail {
     degree: string;
@@ -51,7 +51,7 @@ const Resume = ({ work, education }: any) => {
             </Box>
 
             {educationDetail.map((data, index) => {
-                return <Box className={style.item} key={index}>
+                return <Box className={styles.item} key={index}>
                     <Box>
                         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'start' }}>
                             <Box sx={{ display: 'flex', alignItems: 'center', border: "3px solid #FFFFFF1A", borderRadius: '30px', padding: '5px 20px' }}>
@@ -68,7 +68,7 @@ const Resume = ({ work, education }: any) => {
                                 ( {data.school} )
                             </Typography>
                             <Typography variant="body1" color="#DDDDDD" sx={{ fontSize: '17px', mt: 3 }}>
-                                <span style={{ fontSize: '19px', fontWeight: '700' }}>Grade / Score : </span> {data.grade}
+                                <span styles={{ fontSize: '19px', fontWeight: '700' }}>Grade / Score : </span> {data.grade}
                             </Typography>
                         </Box>
                     </Box>
@@ -82,7 +82,7 @@ const Resume = ({ work, education }: any) => {
             </Box>
 
             {workExperience.map((data, index) => {
-                return <Box className={style.item} key={index}>
+                return <Box className={styles.item} key={index}>
                     <Box>
                         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'start' }}>
                             <Box sx={{ display: 'flex', alignItems: 'center', border: "3px solid #FFFFFF1A", borderRadius: '30px', padding: '5px 20px' }}>

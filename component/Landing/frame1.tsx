@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import img from "./img/Frame.svg";
-import style from './landingComponent.module.css'
+import styles from './landingComponent.module.css'
 import Link from 'next/link';
 
 const Frame1 = () => {
@@ -11,7 +11,7 @@ const Frame1 = () => {
             <Container>
                 <Grid container alignItems="center">
                     <Grid item md={7} xs={12} position='relative'>
-                        <Box className={style.yellow_patch} sx={{ left: { xs: "-5rem", md: '-12rem' }, top: { xs: '-5rem', md: '-7rem' } }} />
+                        <Box className={styles.yellow_patch} sx={{ left: { xs: "-5rem", md: '-12rem' }, top: { xs: '-5rem', md: '-7rem' } }} />
 
                         <Box sx={{ marginBottom: { xs: '2rem', md: 0 } }}>
                             <Typography variant="h2" component={'h3'}
@@ -24,7 +24,7 @@ const Frame1 = () => {
                                     lineHeight: { xs: '50px', md: '70px' }
 
                                 }}>
-                                Try our <span className={style.text_purple}>Professional Resume</span> Builder Now!
+                                Try our <span className={styles.text_purple}>Professional Resume</span> Builder Now!
                             </Typography>
                             <Typography variant="body1" component={'h4'} sx=
                                 {{
@@ -44,13 +44,13 @@ const Frame1 = () => {
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
                                         <Link href={'/user'}>
-                                            <button className={style.button}>
+                                            <button className={styles.button}>
                                                 Create your resume now
                                             </button>
                                         </Link>
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <button className={style.button_line}>
+                                        <button className={styles.button_line}>
                                             Resume Examples
                                         </button>
                                     </Grid>
@@ -71,7 +71,7 @@ const Frame1 = () => {
                         </Box>
 
 
-                        <Box className={style.blue_patch} sx={{ right: { xs: "20px", md: "170px" }, top: { xs: "50px", md: "100px" } }} />
+                        <Box className={styles.blue_patch} sx={{ right: { xs: "20px", md: "170px" }, top: { xs: "50px", md: "100px" } }} />
 
                     </Grid>
                 </Grid>

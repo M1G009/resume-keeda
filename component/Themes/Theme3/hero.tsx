@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import style from './theme3.module.css';
+import styles from './theme3.module.css';
 import Image from 'next/image';
 import { getPersonaldetails } from '../../../services/Personal';
 
@@ -28,7 +28,7 @@ const Hero = ({ user, professional, personal }: any) => {
 
 
     return (
-        <Box className={style.bg} id="home" >
+        <Box className={styles.bg} id="home" >
             <Container maxWidth="lg" sx={{ pt: '150px', pb: 5 }}>
                 <Grid container spacing={2}>
                     <Grid item md={7} xs={12}>
@@ -45,7 +45,7 @@ const Hero = ({ user, professional, personal }: any) => {
                                 <span style={{ color: '#28E98C' }}> {userFirstName} {userLastName}</span>
                             </Typography>
 
-                            <Box className={style.curve_box}>
+                            <Box className={styles.curve_box}>
                                 {userExp === 0 ?
                                     <Typography variant="body1" color="#fff"
                                         sx={{ fontSize: '35px', fontWeight: '600' }}>
@@ -71,7 +71,7 @@ const Hero = ({ user, professional, personal }: any) => {
                         </Box>
                     </Grid>
                     <Grid item md={5} xs={12}>
-                        <Box style={{ maxWidth: '100%', height: 'auto' }}>
+                        <Box sx={{ maxWidth: '100%', height: 'auto' }}>
                             <Image
                                 src={`${process.env.API_BASE_URL}/images/` + userImage}
                                 alt='user Image'

@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import frame3 from "./img/Frame3.svg"
-import style from './landingComponent.module.css'
+import styles from './landingComponent.module.css'
 import Link from 'next/link';
 
 const Frame3 = () => {
@@ -18,7 +18,7 @@ const Frame3 = () => {
                             lineHeight: { md: '80px' },
                             textTransform: 'capitalize'
                         }}>
-                            Create perfect <span className={style.text_purple} >resumes </span>for the modern <span className={style.text_purple}>job market</span>
+                            Create perfect <span className={styles.text_purple} >resumes </span>for the modern <span className={styles.text_purple}>job market</span>
                         </Typography>
                         <Typography variant='body1'
                             sx={{
@@ -37,7 +37,7 @@ const Frame3 = () => {
 
                         <Box sx={{ mt: 5 }}>
                             <Link href={'/user'}>
-                                <button className={style.button} >
+                                <button className={styles.button} >
                                     Create your resume now
                                 </button>
                             </Link>
@@ -45,7 +45,7 @@ const Frame3 = () => {
                     </Grid>
                     <Grid item md={4} sm={12}>
                         <Box position='relative' sx={{ display: 'flex', justifyContent: 'center' }}>
-                            <Box className={style.blue_patch} sx={{ right: { xs: "10rem", md: "0px" }, top: { xs: "50px", md: "70px" } }} />
+                            <Box className={styles.blue_patch} sx={{ right: { xs: "10rem", md: "0px" }, top: { xs: "50px", md: "70px" } }} />
 
                             <Box sx={{ display: { md: "block", xs: 'none' } }}>
                                 <Image src={frame3} alt='' width={450} height={500} ></Image>

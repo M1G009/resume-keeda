@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar'
-import Typography from '@mui/material/Typography'
 import { Box, Container } from '@mui/material'
-import style from './theme3.module.css'
+import styles from './theme3.module.css'
 import SideButton from './sidebutton'
 import Image from 'next/image'
 import dribbble_icon from './img/dribble-icon.png'
@@ -29,11 +28,11 @@ const Header = ({ professional }: any) => {
     const [behance, setBehance] = useState<string>(professional.behance)
 
     const icons = [
-        { url: linkedinurl, img: dribbble_icon },
+        { url: linkedinurl, img: linkedin_icon },
         { url: stackoverflowurl, img: stackoverflow_icon },
         { url: github, img: behance_icon },
         { url: dribble, img: github_icon },
-        { url: behance, img: linkedin_icon },
+        { url: behance, img: dribbble_icon },
     ]
 
 
@@ -53,27 +52,27 @@ const Header = ({ professional }: any) => {
                             </Box>
                         </Box>
                         <Box sx={{ width: '60%', display: { md: 'block', xs: 'none' } }}>
-                            <ul style={{ display: 'flex', gap: '30px', listStyle: "none", justifyContent: 'center' }}>
+                            <Box sx={{ display: 'flex', gap: '30px', listStyle: "none", justifyContent: 'center' }}>
                                 {pages.map((page) => (
                                     <a href={`#${page.id}`} key={page.id}>
-                                        <li className={style.menu}>{page.name}</li>
+                                        <li className={styles.menu}>{page.name}</li>
                                     </a>
                                 ))}
 
 
-                            </ul>
+                            </Box>
                         </Box>
                         <Box sx={{ width: '25%', display: { md: 'block', xs: 'none' } }}>
-                            <ul style={{ display: 'flex', gap: '20px', listStyle: "none", justifyContent: 'end' }}>
+                            <Box sx={{ display: 'flex', gap: '20px', listStyle: "none", justifyContent: 'end' }}>
                                 {icons.map((el, i) => (
                                     el.url && (
-                                        <li className={style.icons} key={i} onClick={() => window.open(el.url)}>
-                                            <Image src={el.img} width={25} height={25} alt='icons' ></Image>
+                                        <li className={styles.icons} key={i} onClick={() => window.open(el.url)}>
+                                            <Image src={el.img} width={25} height={25} alt='icons'></Image>
                                         </li>
                                     )
                                 ))}
 
-                            </ul>
+                            </Box>
                         </Box>
                         <Box sx={{ width: '50%', display: { md: 'none', xs: 'block' } }}>
                             <Box sx={{ display: 'flex', justifyContent: 'end' }}>

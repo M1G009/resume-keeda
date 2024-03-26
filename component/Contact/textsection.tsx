@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
-import style from "./contact.module.css"
+import styles from "./contact.module.css"
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
 import PublicIcon from '@mui/icons-material/Public';
@@ -8,8 +8,8 @@ const Textsection = () => {
     return (
         <Box position={'relative'}>
             <Container>
-                <Box className={style.blue_patch} sx={{ top: { md: '-10rem', xs: "5rem" }, right: { md: '-2rem', xs: '13rem' } }} />
-                <Box className={style.yellow_patch} sx={{ bottom: { md: '-10rem', xs: "5rem" }, left: { md: '-2rem', xs: '13rem' } }} />
+                <Box className={styles.blue_patch} sx={{ top: { md: '-10rem', xs: "5rem" }, right: { md: '-2rem', xs: '13rem' } }} />
+                <Box className={styles.yellow_patch} sx={{ bottom: { md: '-10rem', xs: "5rem" }, left: { md: '-2rem', xs: '13rem' } }} />
 
                 <Box mt={15}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -36,7 +36,7 @@ const Textsection = () => {
                 <Box maxWidth={'750px'} mx={'auto'} mt={15}>
                     <Box sx={{ display: 'flex', flexDirection: { md: 'row', xs: 'column' }, justifyContent: 'center', alignItems: 'center', gap: { md: 0, xs: '40px' } }}>
                         <Box sx={{ width: "33.33%", display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Box className={style.box_rotate_purple}>
+                            <Box className={styles.box_rotate_purple}>
                                 <EmailIcon />
                             </Box>
                             <Typography mt={4}>
@@ -45,7 +45,7 @@ const Textsection = () => {
                         </Box>
 
                         <Box sx={{ width: "33.33%", display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Box className={style.box_rotate_yellow}>
+                            <Box className={styles.box_rotate_yellow}>
                                 <CallIcon />
                             </Box>
                             <Typography mt={4}>
@@ -54,7 +54,7 @@ const Textsection = () => {
                         </Box>
 
                         <Box sx={{ width: "33.33%", display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Box className={style.box_rotate_purple}>
+                            <Box className={styles.box_rotate_purple}>
                                 <PublicIcon />
                             </Box>
                             <Typography mt={4}>

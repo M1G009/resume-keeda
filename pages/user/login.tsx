@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Box, Button, Container, TextField, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
-import style from '../../styles/user.module.css';
+import styles from '../../styles/user.module.css';
 import LockIcon from '@mui/icons-material/Lock';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import Link from 'next/link';
@@ -48,20 +48,20 @@ const Login: React.FC = () => {
   const { errors, touched, values, handleChange, handleBlur, handleSubmit } = formik;
 
   return (
-    <Box position={"relative"} className={style.bg}>
+    <Box position={"relative"} className={styles.bg}>
       <Box sx={{ display: 'grid', placeItems: 'center', minHeight: '100vh' }}>
         <Container maxWidth="sm" >
           <Box sx={{ position: 'absolute', top: '30px', left: '30px' }}>
             <Link href="/">
-              <button className={style.homebutton} >
+              <button className={styles.homebutton} >
                 <HomeIcon />
               </button>
             </Link>
           </Box>
-          <form className={style.form} onSubmit={handleSubmit}>
-            <Typography id={style.heading}>Login</Typography>
-            <Box className={style.field}>
-              <AlternateEmailIcon className={style.input_icon} />
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <Typography id={styles.heading}>Login</Typography>
+            <Box className={styles.field}>
+              <AlternateEmailIcon className={styles.input_icon} />
               <TextField
                 fullWidth
                 name="email"
@@ -70,12 +70,12 @@ const Login: React.FC = () => {
                 onBlur={handleBlur}
                 error={Boolean(touched.email && errors.email)}
                 placeholder="email"
-                className={style.input_field}
+                className={styles.input_field}
                 type="text"
               />
             </Box>
-            <Box className={style.field}>
-              <LockIcon className={style.input_icon} />
+            <Box className={styles.field}>
+              <LockIcon className={styles.input_icon} />
               <TextField
                 placeholder="Password"
                 fullWidth
@@ -84,24 +84,24 @@ const Login: React.FC = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={Boolean(touched.password && errors.password)}
-                className={style.input_field}
+                className={styles.input_field}
                 type={showPassword ? 'text' : 'password'}
               />
               <Button onClick={togglePasswordVisibility}>
                 {showPassword ? <VisibilityOffIcon sx={{ color: 'white' }} /> : <RemoveRedEyeIcon sx={{ color: 'white' }} />}
               </Button>
             </Box>
-            <Box className={style.btn} sx={{ marginBottom: '20px' }}>
-              <button className={style.button} type="submit" >
+            <Box className={styles.btn} sx={{ marginBottom: '20px' }}>
+              <button className={styles.button} type="submit" >
                 Login
               </button>
-              {/* <Button className={style.button}>
+              {/* <Button className={styles.button}>
                 <Link href="/user/signup">Sign Up</Link>
               </Button> */}
 
             </Box>
             <Box sx={{ textAlign: 'center', mb: 4 }}>
-              <Typography>No account? <Link href='/user/signup' className={style.link}>Sign up</Link></Typography>
+              <Typography>No account? <Link href='/user/signup' className={styles.link}>Sign up</Link></Typography>
             </Box>
           </form>
         </Container>

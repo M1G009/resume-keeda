@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
-import style from './about.module.css'
+import styles from './about.module.css'
 import img1 from './img/person1.png'
 import img2 from './img/person2.png'
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -14,7 +14,7 @@ const OurTeam = () => {
     return (
         <Box mt={18} position={'relative'}>
             <Container>
-                <Box className={style.blue_patch} sx={{ top: { md: '2rem', xs: "29rem" }, right: { md: '1rem', xs: '13rem' } }} />
+                <Box className={styles.blue_patch} sx={{ top: { md: '2rem', xs: "29rem" }, right: { md: '1rem', xs: '13rem' } }} />
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <Typography mb={2}
@@ -37,11 +37,11 @@ const OurTeam = () => {
                     </Box>
                 </Box>
 
-                <Box className={style.grid} mt={10}>
-                    <Box className={style.box_purple}>
+                <Box className={styles.grid} mt={10}>
+                    <Box className={styles.box_purple}>
                         <Box mb={2} >
-                            <Box className={style.img_box}>
-                                <Image src={img2} alt='' width={170} height={170} className={style.border_purple}></Image>
+                            <Box className={styles.img_box}>
+                                <Image src={img2} alt='' width={170} height={170} className={styles.border_purple}></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -49,7 +49,7 @@ const OurTeam = () => {
                             <Typography sx={{ color: "#A7A7A7", mt: 2 }}>Founder</Typography>
                         </Box>
                         <Box mt={3}>
-                            <ul className={style.icon_list}>
+                            <ul className={styles.icon_list}>
                                 <li><Link href={'#'}><FacebookIcon /></Link></li>
                                 <li><Link href={'#'}><InstagramIcon /></Link></li>
                                 <li><Link href={'#'}><TwitterIcon /></Link></li>
@@ -58,10 +58,10 @@ const OurTeam = () => {
                         </Box>
                     </Box>
 
-                    <Box className={style.box_yellow}>
+                    <Box className={styles.box_yellow}>
                         <Box mb={2} >
-                            <Box className={style.img_box}>
-                                <Image src={img1} alt='' width={170} height={170} className={style.border_yellowF} ></Image>
+                            <Box className={styles.img_box}>
+                                <Image src={img1} alt='' width={170} height={170} className={styles.border_yellowF} ></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -69,7 +69,7 @@ const OurTeam = () => {
                             <Typography sx={{ color: "#A7A7A7", mt: 2 }}>HR Manager</Typography>
                         </Box>
                         <Box mt={3}>
-                            <ul className={style.icon_list}>
+                            <ul className={styles.icon_list}>
                                 <li><Link href={'#'}><FacebookIcon /></Link></li>
                                 <li><Link href={'#'}><InstagramIcon /></Link></li>
                                 <li><Link href={'#'}><TwitterIcon /></Link></li>
@@ -78,10 +78,10 @@ const OurTeam = () => {
                         </Box>
                     </Box>
 
-                    <Box className={style.box_purple}>
+                    <Box className={styles.box_purple}>
                         <Box mb={2} >
-                            <Box className={style.img_box}>
-                                <Image src={img2} alt='' width={170} height={170} className={style.boder}></Image>
+                            <Box className={styles.img_box}>
+                                <Image src={img2} alt='' width={170} height={170} className={styles.boder}></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -89,7 +89,7 @@ const OurTeam = () => {
                             <Typography sx={{ color: "#A7A7A7", mt: 2 }}>Founder</Typography>
                         </Box>
                         <Box mt={3}>
-                            <ul className={style.icon_list}>
+                            <ul className={styles.icon_list}>
                                 <li><Link href={'#'}><FacebookIcon /></Link></li>
                                 <li><Link href={'#'}><InstagramIcon /></Link></li>
                                 <li><Link href={'#'}><TwitterIcon /></Link></li>
@@ -98,10 +98,10 @@ const OurTeam = () => {
                         </Box>
                     </Box>
 
-                    <Box className={style.box_yellow}>
+                    <Box className={styles.box_yellow}>
                         <Box mb={2} >
-                            <Box className={style.img_box}>
-                                <Image src={img1} alt='' width={170} height={170} className={style.border_yellowF} ></Image>
+                            <Box className={styles.img_box}>
+                                <Image src={img1} alt='' width={170} height={170} className={styles.border_yellowF} ></Image>
                             </Box>
                         </Box>
                         <Box sx={{ textAlign: 'center' }}>
@@ -109,7 +109,7 @@ const OurTeam = () => {
                             <Typography sx={{ color: "#A7A7A7", mt: 2 }}>HR Manager</Typography>
                         </Box>
                         <Box mt={3}>
-                            <ul className={style.icon_list}>
+                            <ul className={styles.icon_list}>
                                 <li><Link href={'#'}><FacebookIcon /></Link></li>
                                 <li><Link href={'#'}><InstagramIcon /></Link></li>
                                 <li><Link href={'#'}><TwitterIcon /></Link></li>

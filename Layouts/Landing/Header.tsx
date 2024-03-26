@@ -9,7 +9,7 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import style from "./landing.module.css"
+import styles from "./landing.module.css"
 import Link from 'next/link';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -90,7 +90,7 @@ function Header() {
               {pages.map((page) => (
                 <Link href={page.path}>
                   <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ py: 1.5, px: 4 }}>
-                    <Typography textAlign="right" className={style.page_hover} sx={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
+                    <Typography textAlign="right" className={styles.page_hover} sx={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
                       {page.name}
                     </Typography>
                   </MenuItem>
@@ -100,14 +100,14 @@ function Header() {
                 <>
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Link href="/user/login">
-                      <button className={style.button_small}>
+                      <button className={styles.button_small}>
                         Login
                       </button>
                     </Link>
                   </MenuItem>
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Link href="/user/signup">
-                      <button className={style.button_small}>
+                      <button className={styles.button_small}>
                         Signup
                       </button>
                     </Link>
@@ -123,7 +123,7 @@ function Header() {
               {pages.map((page) => (
                 <Link key={page.name} href={page.path}>
                   <MenuItem onClick={handleCloseNavMenu} sx={{ py: 1.5, px: 4 }}>
-                    <Typography textAlign="right" className={style.page_hover} sx={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
+                    <Typography textAlign="right" className={styles.page_hover} sx={{ color: router.pathname === page.path ? '#F6CA56' : 'inherit' }}>
                       {page.name}
                     </Typography>
                   </MenuItem>
@@ -136,12 +136,12 @@ function Header() {
           {!isMd && (
             <Box sx={{ flexGrow: 0 }}>
               <Link href="/user/login">
-                <button className={style.button2} >
+                <button className={styles.button2} >
                   Login
                 </button>
               </Link>
               <Link href="/user/signup">
-                <button className={style.button1} >
+                <button className={styles.button1} >
                   Signup
                 </button>
               </Link>

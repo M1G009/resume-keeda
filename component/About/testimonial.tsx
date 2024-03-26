@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import StarRateIcon from '@mui/icons-material/StarRate';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
-import style from './about.module.css'
+import styles from './about.module.css'
 import img1 from './img/person1.png'
 import img2 from './img/person2.png'
 
@@ -33,10 +33,10 @@ const Testimonial = () => {
                     </Box>
                 </Box>
 
-                <Box className={style.grid3} mt={10}>
-                    <Box className={style.border_box_purple}>
+                <Box className={styles.grid3} mt={10}>
+                    <Box className={styles.border_box_purple}>
                         <Box sx={{ display: 'flex' }}>
-                            <Box className={style.img_box2}>
+                            <Box className={styles.img_box2}>
                                 <Image src={img1} alt='img' height={50} width={50} ></Image>
                             </Box>
                             <Box px={4}>
@@ -51,7 +51,7 @@ const Testimonial = () => {
                                 mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
                                 Nullam quis imperdiet augue.
                             </Typography>
-                            <ul className={style.ratings}>
+                            <ul className={styles.ratings}>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
@@ -60,9 +60,9 @@ const Testimonial = () => {
                         </Box>
                     </Box>
 
-                    <Box className={style.border_box_yellow}>
+                    <Box className={styles.border_box_yellow}>
                         <Box sx={{ display: 'flex' }}>
-                            <Box className={style.img_box2}>
+                            <Box className={styles.img_box2}>
                                 <Image src={img2} alt='img' height={50} width={50} ></Image>
                             </Box>
                             <Box px={4}>
@@ -77,7 +77,7 @@ const Testimonial = () => {
                                 mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
                                 Nullam quis imperdiet augue.
                             </Typography>
-                            <ul className={style.ratings}>
+                            <ul className={styles.ratings}>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
@@ -87,9 +87,9 @@ const Testimonial = () => {
                         </Box>
                     </Box>
 
-                    <Box className={style.border_box_purple}>
+                    <Box className={styles.border_box_purple}>
                         <Box sx={{ display: 'flex' }}>
-                            <Box className={style.img_box2}>
+                            <Box className={styles.img_box2}>
                                 <Image src={img1} alt='img' height={50} width={50} ></Image>
                             </Box>
                             <Box px={4}>
@@ -104,7 +104,7 @@ const Testimonial = () => {
                                 mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
                                 Nullam quis imperdiet augue.
                             </Typography>
-                            <ul className={style.ratings}>
+                            <ul className={styles.ratings}>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
                                 <li><StarRateIcon /></li>
@@ -116,7 +116,7 @@ const Testimonial = () => {
                 </Box>
 
                 <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-                    <button className={style.button}>Read More</button>
+                    <button className={styles.button}>Read More</button>
                 </Box>
             </Container>
         </Box>

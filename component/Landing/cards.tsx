@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
-import style from './landingComponent.module.css'
+import styles from './landingComponent.module.css'
 import Image from 'next/image'
 import img1 from './img/resume.png'
 import img2 from './img/antivirus.png'
@@ -15,9 +15,9 @@ const Cards = () => {
         <Box sx={{ py: 5 }}>
             <Container>
                 <Box position={'relative'}>
-                    <Box className={style.yellow_patch} sx={{ right: { xs: "10rem", md: '-18rem' }, top: { xs: '70rem', md: '-4rem' } }} />
+                    <Box className={styles.yellow_patch} sx={{ right: { xs: "10rem", md: '-18rem' }, top: { xs: '70rem', md: '-4rem' } }} />
 
-                    <Box className={style.blue_patch} sx={{ left: { xs: "10rem", md: '-15rem' }, top: { xs: '20rem', md: '60rem' } }} />
+                    <Box className={styles.blue_patch} sx={{ left: { xs: "10rem", md: '-15rem' }, top: { xs: '20rem', md: '60rem' } }} />
 
                     <Typography component={'h3'} sx={{
                         textAlign: 'center',
@@ -28,8 +28,8 @@ const Cards = () => {
                         mt: 5
                     }}>Features designed to help you win your dream job</Typography>
                 </Box>
-                <Box className={style.grid} sx={{ mt: 7 }}>
-                    <Box className={style.box_purple}>
+                <Box className={styles.grid} sx={{ mt: 7 }}>
+                    <Box className={styles.box_purple}>
                         <Box sx={
                             {
                                 display: 'flex',
@@ -53,7 +53,7 @@ const Cards = () => {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box className={style.box_yellow}>
+                    <Box className={styles.box_yellow}>
                         <Box sx={
                             {
                                 display: 'flex',
@@ -77,7 +77,7 @@ const Cards = () => {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box className={style.box_purple}>
+                    <Box className={styles.box_purple}>
                         <Box sx={
                             {
                                 display: 'flex',
@@ -101,7 +101,7 @@ const Cards = () => {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box className={style.box_yellow}>
+                    <Box className={styles.box_yellow}>
                         <Box sx={
                             {
                                 display: 'flex',
@@ -125,7 +125,7 @@ const Cards = () => {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box className={style.box_purple}>
+                    <Box className={styles.box_purple}>
                         <Box sx={
                             {
                                 display: 'flex',
@@ -149,7 +149,7 @@ const Cards = () => {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box className={style.box_yellow}>
+                    <Box className={styles.box_yellow}>
                         <Box sx={
                             {
                                 display: 'flex',
