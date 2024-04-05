@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import { Box, Button, Container, TextField, Typography } from '@mui/material';
-import { useRouter } from 'next/router';
-import styles from '../../styles/user.module.css'
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import Link from 'next/link';
-import { UserSignup } from '../../services/user';
-import HomeIcon from '@mui/icons-material/Home';
-
+import React, { useEffect, useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { Box, Button, Container, TextField, Typography } from "@mui/material";
+import { useRouter } from "next/router";
+import styles from "../../styles/user.module.css";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import Link from "next/link";
+import { UserSignup } from "../../services/user";
+import HomeIcon from "@mui/icons-material/Home";
 
 const Signin = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -22,42 +20,43 @@ const Signin = () => {
 
   const SignUpHandler = async (data) => {
     try {
-      const res = await UserSignup(data)
-      console.log(res);
+      const res = await UserSignup(data);
 
-      return router.push("/user")
+      return router.push("/user");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   const formik = useFormik({
     initialValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string().email('Invalid email address').required('Required'),
-      password: Yup.string().min(8, 'Must be at least 8 characters').required('Required'),
-      firstName: Yup.string().required('first name require'),
-      lastName: Yup.string().required('last name require'),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      password: Yup.string()
+        .min(8, "Must be at least 8 characters")
+        .required("Required"),
+      firstName: Yup.string().required("first name require"),
+      lastName: Yup.string().required("last name require"),
     }),
     onSubmit: (values) => {
       SignUpHandler(values);
-      console.log(values);
     },
   });
 
-  const { errors, touched, values, handleChange, handleBlur, handleSubmit } = formik;
+  const { errors, touched, values, handleChange, handleBlur, handleSubmit } =
+    formik;
 
   return (
-    <Box sx={{ display: 'grid', placeItems: 'center' }} className={styles.bg}>
+    <Box sx={{ display: "grid", placeItems: "center" }} className={styles.bg}>
       <Container maxWidth="sm">
-        <Box sx={{ position: 'absolute', top: '30px', left: '30px' }}>
+        <Box sx={{ position: "absolute", top: "30px", left: "30px" }}>
           <Link href="/">
-            <button className={styles.homebutton} >
+            <button className={styles.homebutton}>
               <HomeIcon />
             </button>
           </Link>
@@ -113,22 +112,29 @@ const Signin = () => {
               onBlur={handleBlur}
               error={Boolean(touched.password && errors.password)}
               className={styles.input_field}
-              type={showPassword ? 'text' : 'password'}
+              type={showPassword ? "text" : "password"}
             />
             <Button onClick={togglePasswordVisibility}>
-              {showPassword ? <VisibilityOffIcon sx={{ color: 'white' }} /> : <RemoveRedEyeIcon sx={{ color: 'white' }} />}
+              {showPassword ? (
+                <VisibilityOffIcon sx={{ color: "white" }} />
+              ) : (
+                <RemoveRedEyeIcon sx={{ color: "white" }} />
+              )}
             </Button>
           </Box>
 
-          <Box className={styles.btn} sx={{ marginBottom: '20px' }}>
-
+          <Box className={styles.btn} sx={{ marginBottom: "20px" }}>
             <button className={styles.button} type="submit">
               Sign Up
             </button>
-
           </Box>
-          <Box sx={{ textAlign: 'center', mb: 4 }}>
-            <Typography>Already have account? <Link href='/user/login' className={styles.link}>Get started</Link></Typography>
+          <Box sx={{ textAlign: "center", mb: 4 }}>
+            <Typography>
+              Already have account?{" "}
+              <Link href="/user/login" className={styles.link}>
+                Get started
+              </Link>
+            </Typography>
           </Box>
         </form>
       </Container>
