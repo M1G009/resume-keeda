@@ -24,15 +24,15 @@ const Header = ({ professional }: any) => {
     const [linkedinurl, setLinkedinurl] = useState<string>(professional.linkedinurl)
     const [stackoverflowurl, setStackoverflowurl] = useState<string>(professional.stackoverflowurl)
     const [github, setGithub] = useState<string>(professional.github)
-    const [dribble, setDribble] = useState<string>(professional.behance)
+    const [dribble, setDribble] = useState<string>(professional.dribble)
     const [behance, setBehance] = useState<string>(professional.behance)
 
     const icons = [
         { url: linkedinurl, img: linkedin_icon },
         { url: stackoverflowurl, img: stackoverflow_icon },
-        { url: github, img: behance_icon },
-        { url: dribble, img: github_icon },
-        { url: behance, img: dribbble_icon },
+        { url: github, img: github_icon },
+        { url: dribble, img: dribbble_icon },
+        { url: behance, img: behance_icon },
     ]
 
 

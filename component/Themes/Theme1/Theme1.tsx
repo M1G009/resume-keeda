@@ -19,6 +19,8 @@ interface Theme1Props {
 }
 
 const Theme1: React.FC<Theme1Props> = ({ data }) => {
+  console.log(data);
+
   return (
     <div>
       <Header />

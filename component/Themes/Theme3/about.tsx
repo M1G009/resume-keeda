@@ -117,7 +117,7 @@ const About = ({
                       my: "20px",
                     }}>
                     l’m <br />
-                    <span styles={{ color: "#28E98C" }}>{profession}</span>
+                    <span style={{ color: "#28E98C" }}>{profession}</span>
                   </Typography>
 
                   <Typography
@@ -129,28 +129,28 @@ const About = ({
 
                   <Box sx={{ mt: 4 }}>
                     <li
-                      styles={{
+                      style={{
                         color: "#28E98C",
                         fontSize: "20px",
                         padding: "5px 0px",
                       }}>
-                      <span styles={{ color: "#fff", fontWeight: "600" }}>
+                      <span style={{ color: "#fff", fontWeight: "600" }}>
                         Name :{" "}
                       </span>
-                      <span styles={{ color: "#DDD" }}>
+                      <span style={{ color: "#DDD" }}>
                         {firstname} {lastname}
                       </span>
                     </li>
                     <li
-                      styles={{
+                      style={{
                         color: "#28E98C",
                         fontSize: "20px",
                         padding: "5px 0px",
                       }}>
-                      <span styles={{ color: "#fff", fontWeight: "600" }}>
+                      <span style={{ color: "#fff", fontWeight: "600" }}>
                         Age :{" "}
                       </span>
-                      <span styles={{ color: "#DDD" }}>{age}</span>
+                      <span style={{ color: "#DDD" }}>{age}</span>
                     </li>
                   </Box>
                 </Box>

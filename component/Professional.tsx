@@ -336,7 +336,7 @@ const Professional = ({ handleNext }: propsInterface) => {
                     <span className={styles.button_hover}>Submit</span>
                   </button>
                 )}
-                {/* <button styles={{ minWidth: 150 }} className={styles.button} type="submit">
+                {/* <button style={{ minWidth: 150 }} className={styles.button} type="submit">
                                     <span className={styles.button_hover}>Submit</span>
                                 </button> */}
               </Box>

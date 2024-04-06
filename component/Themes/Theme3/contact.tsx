@@ -57,7 +57,7 @@ const Contact = ({ personal, user }: any) => {
           variant="h4"
           color="initial"
           sx={{ textAlign: "center", mb: 5 }}>
-          Let's Get <span styles={{ color: "#28E98C" }}>in Touch!</span>
+          Let's Get <span style={{ color: "#28E98C" }}>in Touch!</span>
         </Typography>
 
         <Grid container spacing={3}>

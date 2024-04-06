@@ -31,27 +31,14 @@ const About: React.FC<AboutProps> = ({
     professionalDetail.Profession
   );
   const [object, setObbject] = useState<String>(professionalDetail.Object);
-  const [userFirstName, setUserFirstName] = useState<string>("");
-  const [userLastName, setUserLastName] = useState<string>("");
-  const [userMail, setUserMail] = useState<string>("");
+  const [userFirstName, setUserFirstName] = useState<string>(user.firstName);
+  const [userLastName, setUserLastName] = useState<string>(user.lastName);
+  const [userMail, setUserMail] = useState<string>(user.email);
   const [userAddress, setUserAddress] = useState<string>(personal.Address);
   const [userDOB, setUserDOB] = useState<string>(personal.DOB);
   const [userImage, setUserImage] = useState<string>(personal.userProfileImage);
 
-  const fetchData = async () => {
-    try {
-      const userData: any = await getPersonaldetails();
-      setUserFirstName(userData.userId.firstName);
-      setUserLastName(userData.userId.lastName);
-      setUserMail(userData.userId.email);
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   const calculateAge = (birthdate: string): number | undefined => {
     if (!birthdate) return undefined;
@@ -113,7 +100,7 @@ const About: React.FC<AboutProps> = ({
                       fontSize: isSmallScreen ? "24px" : "32px",
                       pb: 2,
                     }}>
-                    {`I'm ${userFirstName} ${userLastName} (${profession})`}
+                    I'm {userFirstName} {userLastName} {profession}
                   </Typography>
                   <Typography
                     component="p"

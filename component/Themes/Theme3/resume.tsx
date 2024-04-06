@@ -68,7 +68,7 @@ const Resume = ({ work, education }: any) => {
                                 ( {data.school} )
                             </Typography>
                             <Typography variant="body1" color="#DDDDDD" sx={{ fontSize: '17px', mt: 3 }}>
-                                <span styles={{ fontSize: '19px', fontWeight: '700' }}>Grade / Score : </span> {data.grade}
+                                <span style={{ fontSize: '19px', fontWeight: '700' }}>Grade / Score : </span> {data.grade}
                             </Typography>
                         </Box>
                     </Box>

@@ -25,13 +25,23 @@ const AboutSection = () => {
                         <Grid item xs={12} md={6}>
                             <Box sx={{ ml: { md: '20px', xs: 0 } }}>
                                 <ul>
-                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                    <li className={styles.list}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                                    <li className={styles.list}>
+                                        <span style={{ fontWeight: 500, color: '#f6c956', fontSize: '20px' }}>Welcome to Resume Keeda </span>
+                                        : We believe in empowering individuals to craft compelling resumes that showcase their unique skills and experiences.
+
+                                    </li>
+                                    <li className={styles.list}>
+                                        <span style={{ fontWeight: 500, color: '#f6c956', fontSize: '20px' }}>Our Mission </span>
+                                        : We're here to provide you with the tools and resources you need to succeed in today's competitive job market.
+                                    </li>
+                                    <li className={styles.list}>
+                                        <span style={{ fontWeight: 500, color: '#f6c956', fontSize: '20px' }}>Your Career Toolbox </span>
+                                        : Our intuitive and user-friendly platform allows you to create professional-looking resumes in minutes, so you can focus on showcasing your skills and experiences to potential employers.
+                                    </li>
+                                    <li className={styles.list}>
+                                        <span style={{ fontWeight: 500, color: '#f6c956', fontSize: '20px' }}> Your Success Is Our Success </span>: We can't wait to see where your career takes you. Your success is our success, and we're committed to helping you achieve your goals.
+                                    </li>
                                 </ul>
-                                <button className={styles.button} >Read More</button>
                             </Box>
                         </Grid>
                     </Grid>

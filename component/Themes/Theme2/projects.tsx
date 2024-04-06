@@ -20,7 +20,7 @@ const Projects = ({ data }: any) => {
     return (
         <Box id='portfolio' sx={{ bgcolor: "#06140F", pt: 4, pb: 10 }}>
             <Container>
-                <Typography align='center' py={4} fontSize={34} fontWeight={700}>Featured <span styles={{ color: '#FF8A00' }}>Projects</span></Typography>
+                <Typography align='center' py={4} fontSize={34} fontWeight={700}>Featured <span style={{ color: '#FF8A00' }}>Projects</span></Typography>
 
 
                 <Grid container spacing={2} >
@@ -35,7 +35,7 @@ const Projects = ({ data }: any) => {
                                         <Box className={styles.card_back}>
                                             <Typography variant='h2' sx={{ fontSize: '30px', fontWeight: '700' }}>{el.title}</Typography>
                                             <Typography variant='body1' sx={{ mt: 2 }}>{el.description}</Typography>
-                                            <button styles={{ marginTop: 31 }} className={styles.card__button}><Link href={el.url}>Live Demo</Link></button>
+                                            <button style={{ marginTop: 31 }} className={styles.card__button}><Link href={el.url}>Live Demo</Link></button>
                                         </Box>
                                     </Box>
                                 </Box>

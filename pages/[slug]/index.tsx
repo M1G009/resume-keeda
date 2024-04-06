@@ -15,7 +15,6 @@ const Index = ({ userData }) => {
     return <Theme1 data={userData} />;
   }
 
-  return <></>;
 };
 
 export const getServerSideProps = (async (context) => {

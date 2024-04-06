@@ -20,8 +20,8 @@ const Hero = ({ professionalDetail, user }: any) => {
   const [profession, setProfession] = useState<string>(
     professionalDetail.Profession
   );
-  const [userFirstName, setUserFirstName] = useState<string>("");
-  const [userLastName, setUserLastName] = useState<string>("");
+  const [userFirstName, setUserFirstName] = useState<string>(user.firstName);
+  const [userLastName, setUserLastName] = useState<string>(user.lastName);
   const [linkedinurl, setLinkedinurl] = useState<string>(
     professionalDetail.linkedinurl
   );
@@ -32,19 +32,7 @@ const Hero = ({ professionalDetail, user }: any) => {
   const [dribble, setDribble] = useState<string>(professionalDetail.dribble);
   const [behance, setBehance] = useState<string>(professionalDetail.behance);
 
-  const fetchData = async () => {
-    try {
-      const userData: any = await getPersonaldetails();
-      setUserFirstName(userData.userId.firstName);
-      setUserLastName(userData.userId.lastName);
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <Box id="home">

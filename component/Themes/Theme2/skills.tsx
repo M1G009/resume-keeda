@@ -141,6 +141,10 @@ const Skills = ({ skilldetail }: any) => {
             image: require('./img/flutter-icon.svg'),
             options: ['flutter', 'flutter developer']
         },
+        {
+            image: require('./img/next-js.svg'),
+            options: ['next js', 'nextjs']
+        },
     ]
 
 
@@ -174,7 +178,7 @@ const Skills = ({ skilldetail }: any) => {
         <Box id='skills' sx={{ bgcolor: "#111010", py: 10 }}>
             <Container>
                 <Box>
-                    <Typography sx={{ fontSize: "30px", fontWeight: '700' }}><span styles={{ color: '#FF8A00' }}>M</span>y Skills Here</Typography>
+                    <Typography sx={{ fontSize: "30px", fontWeight: '700' }}><span style={{ color: '#FF8A00' }}>M</span>y Skills Here</Typography>
 
                     <Box>
                         <Typography variant='h4' align='right' sx={{ my: 5, fontSize: { xs: '24px', sm: '28px', md: '32px' }, textIndent: { xs: '10%', sm: '20%', md: '40%' } }}>

@@ -78,7 +78,7 @@ const Experience = ({ workexp }: any) => {
         <Box id="experience" sx={{ bgcolor: "#111010", py: 10 }}>
             <Container>
                 <Box>
-                    <Typography sx={{ my: 5, fontSize: '30px', fontWeight: '700' }}><span styles={{ color: '#FF8A00' }}>E</span>xperience</Typography>
+                    <Typography sx={{ my: 5, fontSize: '30px', fontWeight: '700' }}><span style={{ color: '#FF8A00' }}>E</span>xperience</Typography>
                 </Box>
 
                 <Box className="slider-container">
